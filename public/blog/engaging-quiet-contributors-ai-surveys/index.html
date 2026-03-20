@@ -1,0 +1,1026 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-PS5Y8JW0L3"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-PS5Y8JW0L3");
+    </script>
+    <title>
+      Measuring the Unseen: Engaging Quiet Contributors in an AI-Driven World
+    </title>
+    <meta
+      name="description"
+      content="74% of India's workforce fears AI will replace their jobs - but your quietest contributors never say so. Here is how to build surveys that actually reach them."
+    />
+    <meta name="author" content="Tamãrõ HR Consultants" />
+    <meta name="robots" content="index, follow" />
+    <link
+      rel="canonical"
+      href="https://tamarohr.com/blog/engaging-quiet-contributors-ai-surveys/"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://tamarohr.com/assets/favicon-32x32.svg"
+    />
+    <link rel="shortcut icon" href="https://tamarohr.com/assets/favicon.ico" />
+
+    <style>
+      :root {
+        --primary: #32829b;
+        --primary-dark: #26667a;
+        --warm-accent: #e87d5c;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Outfit", sans-serif;
+        line-height: 1.6;
+        color: #2c3e50;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Sora", sans-serif;
+        font-weight: 700;
+      }
+
+      /* Blog Content Styles */
+      .blog-content h2 {
+        font-size: 1.75rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        color: #1a202c;
+      }
+      .blog-content h3 {
+        font-size: 1.375rem;
+        margin-top: 2rem;
+        margin-bottom: 0.75rem;
+        color: #2d3748;
+      }
+      .blog-content h4 {
+        font-size: 1.125rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: #4a5568;
+      }
+      .blog-content p {
+        margin-bottom: 1.25rem;
+        color: #4a5568;
+        line-height: 1.8;
+      }
+      .blog-content ul,
+      .blog-content ol {
+        margin-bottom: 1.25rem;
+        padding-left: 1.5rem;
+        color: #4a5568;
+      }
+      .blog-content ul {
+        list-style-type: disc;
+      }
+      .blog-content ol {
+        list-style-type: decimal;
+      }
+      .blog-content li {
+        margin-bottom: 0.5rem;
+        line-height: 1.7;
+      }
+      .blog-content blockquote {
+        border-left: 4px solid var(--primary);
+        padding-left: 1.5rem;
+        margin: 1.5rem 0;
+        font-style: italic;
+        color: #718096;
+      }
+      .blog-content a {
+        color: var(--primary);
+        text-decoration: underline;
+      }
+      .blog-content a:hover {
+        color: var(--primary-dark);
+      }
+      .blog-content strong {
+        font-weight: 600;
+        color: #2d3748;
+      }
+      .blog-content img {
+        border-radius: 0.75rem;
+        margin: 1.5rem 0;
+      }
+      .blog-content hr {
+        border: none;
+        border-top: 1px solid #e2e8f0;
+        margin: 2rem 0;
+      }
+      .blog-content table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+      }
+      .blog-content th,
+      .blog-content td {
+        border: 1px solid #e2e8f0;
+        padding: 0.75rem 1rem;
+        text-align: left;
+      }
+      .blog-content th {
+        background-color: #f7fafc;
+        font-weight: 600;
+      }
+      .blog-content code {
+        background-color: #f7fafc;
+        padding: 0.125rem 0.375rem;
+        border-radius: 0.25rem;
+        font-size: 0.875rem;
+        font-family: monospace;
+      }
+      .blog-content pre {
+        background-color: #1a202c;
+        color: #e2e8f0;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        overflow-x: auto;
+        margin: 1.5rem 0;
+      }
+      .blog-content pre code {
+        background: none;
+        padding: 0;
+        color: inherit;
+      }
+      .stat-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1rem;
+        margin: 1.5rem 0 2rem;
+      }
+      .stat-card {
+        background: linear-gradient(135deg, #e0f2f1 0%, #f0f9ff 100%);
+        border: 1px solid #b2dfdb;
+        border-radius: 0.75rem;
+        padding: 1.25rem 1rem;
+        text-align: center;
+      }
+      .stat-card .stat-number {
+        font-family: "Sora", sans-serif;
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--primary);
+        line-height: 1.1;
+        display: block;
+        margin-bottom: 0.35rem;
+      }
+      .stat-card .stat-label {
+        font-size: 0.8rem;
+        color: #4a5568;
+        line-height: 1.4;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <a href="#">
+            <img
+              src="https://tamarohr.com/assets/logo.png"
+              alt="Tamaro HR Consultants Logo"
+              style="height: 28px"
+            />
+          </a>
+          <div class="hidden md:flex space-x-8">
+            <!-- Services Dropdown -->
+            <div class="relative group">
+              <a
+                href="#services"
+                class="text-gray-700 hover:text-teal-600 transition font-medium flex items-center"
+              >
+                Services
+                <i class="fas fa-chevron-down ml-1 text-xs"></i>
+              </a>
+              <div
+                class="absolute left-0 top-full mt-2 w-64 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100"
+              >
+                <div class="py-2">
+                  <a
+                    href="https://tamarohr.com/payroll-outsourcing/"
+                    target="_blank"
+                    class="block px-4 py-3 text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition"
+                  >
+                    <i class="fas fa-money-check-alt mr-2 text-teal-500"></i>
+                    Outsourced HR Operations
+                  </a>
+                  <a
+                    href="https://tamarohr.com/employee-survey-services/"
+                    target="_blank"
+                    class="block px-4 py-3 text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition"
+                  >
+                    <i class="fas fa-poll mr-2 text-teal-500"></i>
+                    HR Consulting
+                  </a>
+                  <a
+                    href="https://tamarohr.com/executive-search/"
+                    target="_blank"
+                    class="block px-4 py-3 text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition"
+                  >
+                    <i class="fas fa-user-tie mr-2 text-teal-500"></i>
+                    Executive Search
+                  </a>
+                  <a
+                    href="https://tamarohr.com/fractional-chro/"
+                    target="_blank"
+                    class="block px-4 py-3 text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition"
+                  >
+                    <i class="fas fa-chess-king mr-2 text-teal-500"></i>
+                    Fractional CHRO
+                  </a>
+                  <a
+                    href="https://tamarohr.com/contract-temp-staffing/"
+                    target="_blank"
+                    class="block px-4 py-3 text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition"
+                  >
+                    <i class="fas fa-users-cog mr-2 text-teal-500"></i>
+                    Contract Staffing
+                  </a>
+                </div>
+              </div>
+            </div>
+            <a
+              href="#contact"
+              class="text-gray-700 hover:text-teal-600 transition font-medium"
+              >Contact</a
+            >
+          </div>
+          <button id="mobileMenuBtn" class="md:hidden text-gray-700">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-2">
+          <div class="border-b border-gray-100 pb-2 mb-2">
+            <p class="text-gray-500 text-sm font-medium mb-2">Services</p>
+            <a
+              href="https://tamarohr.com/payroll-outsourcing/"
+              target="_blank"
+              class="block text-gray-700 hover:text-teal-600 transition pl-4 py-1"
+              >Payroll Outsourcing</a
+            >
+            <a
+              href="https://tamarohr.com/contract-temp-staffing/"
+              target="_blank"
+              class="block text-gray-700 hover:text-teal-600 transition pl-4 py-1"
+              >Contract Staffing</a
+            >
+            <a
+              href="https://tamarohr.com/employee-survey-services/"
+              target="_blank"
+              class="block text-gray-700 hover:text-teal-600 transition pl-4 py-1"
+              >Employee Survey Services</a
+            >
+            <a
+              href="https://tamarohr.com/executive-search/"
+              target="_blank"
+              class="block text-gray-700 hover:text-teal-600 transition pl-4 py-1"
+              >Executive Search</a
+            >
+            <a
+              href="https://tamarohr.com/fractional-chro/"
+              target="_blank"
+              class="block text-gray-700 hover:text-teal-600 transition pl-4 py-1"
+              >Fractional CHRO</a
+            >
+          </div>
+          <a
+            href="#contact"
+            class="block text-gray-700 hover:text-teal-600 transition"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Blog Post Header -->
+    <header class="pt-24 bg-white">
+      <div class="container mx-auto px-6 py-12 max-w-4xl">
+        <!-- Category & Date -->
+        <div class="flex items-center gap-4 mb-4">
+          <span
+            class="inline-block px-3 py-1 text-sm font-medium rounded-full"
+            style="background-color: #e0f2f1; color: #32829b"
+            >HR Insights</span
+          >
+          <span class="text-gray-500 text-sm">
+            <i class="far fa-calendar-alt mr-1"></i>
+            February 14, 2026
+          </span>
+          <span class="text-gray-500 text-sm">
+            <i class="far fa-clock mr-1"></i>
+            6 min read
+          </span>
+        </div>
+
+        <!-- Title -->
+        <h1
+          class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight"
+        >
+          Measuring the Unseen: Engaging Quiet Contributors in an AI-Driven
+          World
+        </h1>
+
+        <!-- Author -->
+        <div class="flex items-center">
+          <img
+            src="https://tamarohr.com/assets/HR Consultant Chetan Parikh.webp"
+            alt="Chetan Parikh"
+            class="w-12 h-12 rounded-full mr-4 object-cover"
+          />
+          <div>
+            <p class="font-medium text-gray-800">Chetan Parikh</p>
+            <p class="text-sm text-gray-500">HR Consultant</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Cover Image -->
+    <div class="container mx-auto px-6 max-w-4xl">
+      <img
+        src="./engaging-quiet-contributors-ai-surveys.avif"
+        alt="A thoughtful employee working quietly at their desk, representing the quiet contributors organisations often overlook in engagement surveys"
+        class="w-full h-auto rounded-2xl shadow-lg"
+      />
+    </div>
+
+    <!-- Blog Content -->
+    <main class="container mx-auto px-6 py-12 max-w-4xl">
+      <article class="bg-white rounded-2xl shadow-sm p-8 md:p-12">
+        <div class="blog-content">
+          <p>
+            74% of India's workforce fears AI could replace their jobs. That is
+            not a fringe concern - it is the majority of your people, according
+            to Microsoft's Work Trend Index. And the employees most rattled by
+            this shift are not the ones raising their hands in town halls or
+            filing formal feedback. They are your quiet contributors - the
+            steady, reliable backbone of your organisation - and most engagement
+            surveys are not designed to reach them.
+          </p>
+
+          <p>
+            AI anxiety in the workplace is no longer a future problem. Gallup's
+            2025 State of the Global Workplace report shows India's employee
+            engagement dropped three percentage points, driving a regional
+            decline across South Asia. IIM- Ahmedabad research finds 68% of
+            Indian white-collar workers fear their roles could be automated
+            within five years. In the Middle East, 85% of employees now rank job
+            security as their top priority. In Africa, only 35% believe their
+            current skills will remain relevant in three years. The anxiety is
+            present, widespread, and - critically - largely silent.
+          </p>
+
+          <div class="stat-grid">
+            <div class="stat-card">
+              <span class="stat-number">74%</span>
+              <span class="stat-label"
+                >of India's workforce fears AI could replace their jobs
+                (Microsoft Work Trend Index)</span
+              >
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">15%</span>
+              <span class="stat-label"
+                >of employees deliver 50% of organisational impact - many of
+                them quiet contributors</span
+              >
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">75%</span>
+              <span class="stat-label"
+                >disclose sensitive workplace concerns when anonymity is
+                guaranteed vs. 20% without it (UC study)</span
+              >
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">8%</span>
+              <span class="stat-label"
+                >of employees globally believe their company actually acts on
+                survey feedback</span
+              >
+            </div>
+          </div>
+
+          <h2>Your most valuable people are the ones you are not hearing</h2>
+
+          <p>
+            Every organisation has them. They do not dominate meetings, chase
+            visibility, or self-promote on internal channels. But research shows
+            a mere 15% of employees deliver 50% of organisational impact - and
+            many of these high-impact individuals operate quietly. They smooth
+            conflicts, translate confusion into action, and absorb pressure so
+            others can perform. Quiet contributors are the operational backbone.
+          </p>
+
+          <p>
+            Yet traditional performance systems systematically overlook them.
+            Studies show 96% of executives notice in-office, visible efforts
+            more readily than behind-the-scenes work. In calibration sessions,
+            ratings drift toward the loudest voice in the room. As workplace
+            researcher Susan Cain documented, most organisations are built
+            around an "Extrovert Ideal" - the belief that the ideal employee is
+            gregarious, assertive, and comfortable in the spotlight. The quiet
+            contributor does not fit that mould, so they disappear from
+            management's radar without ever making a sound.
+          </p>
+
+          <h2>Why AI transitions hit quiet contributors hardest</h2>
+
+          <p>
+            When organisations roll out AI tools, a predictable pattern emerges.
+            Vocal employees champion new technologies, demonstrate visible
+            adaptation, and get recognised for it. Quiet contributors - whose
+            work was already harder to quantify - become even more invisible in
+            the process.
+          </p>
+
+          <p>
+            The psychological safety dimension makes this significantly worse.
+            The American Psychological Association's 2024 survey found that
+            workers with lower psychological safety are nearly twice as likely
+            to worry about AI making their jobs obsolete - 55% versus 30% among
+            those who feel psychologically safe. A 2025 study published in
+            Nature found that AI adoption directly reduces psychological safety,
+            which then increases depression risk. Quiet contributors, already
+            less likely to voice concerns, internalise this anxiety in silence.
+            They do not push back. They disengage - or they leave.
+          </p>
+
+          <p>
+            This dynamic is amplified in hierarchical workplace cultures common
+            across India, the Middle East, and parts of Africa, where deference
+            to authority discourages bottom-up communication. Teams can appear
+            polite, efficient, and high-performing on the surface, while
+            underneath there is significant self-censorship. The engagement
+            survey that relies on voluntary, visible participation captures none
+            of it.
+          </p>
+
+          <h2>Traditional surveys are missing the signal</h2>
+
+          <p>
+            Standard employee engagement surveys measure satisfaction and
+            motivation. They do not measure AI trust or job security sentiment -
+            the two factors now most closely driving disengagement. And their
+            design often excludes quiet contributors by default.
+          </p>
+
+          <p>
+            Quiet employees are less likely to attend focus groups, raise
+            concerns in open forums, or flag issues on company channels. When
+            surveys are not fully anonymous, only 20% of employees disclose
+            sensitive workplace concerns - compared to 75% when anonymity is
+            guaranteed, according to a University of California study covering
+            over 1,500 employees. If your listening strategy relies on voluntary
+            voice, you are hearing only from those who already feel safe enough
+            to speak. Which means you are not hearing from the people this
+            moment most urgently concerns.
+          </p>
+
+          <blockquote>
+            Teams can look polite, efficient, and high-performing on the
+            surface, but underneath, there can be a lot of self-censorship.
+          </blockquote>
+
+          <h2>What to measure that most surveys currently miss</h2>
+
+          <p>
+            Reaching quiet contributors during an AI transition requires adding
+            specific dimensions to your pulse surveys that standard engagement
+            instruments do not cover. Four areas matter most right now.
+          </p>
+
+          <p>
+            <strong>AI trust.</strong> Direct questions such as "I am confident
+            my organisation will retrain me if AI changes my role" and "My
+            employer has been transparent about how AI will impact my work" -
+            measured on a five-point scale - give you actionable signal on where
+            confidence is low before it becomes a retention problem. Research
+            using the validated Trust in Automation Scale confirms that short,
+            focused instruments of as few as three items effectively capture AI
+            trust when deployed regularly through pulse surveys.
+          </p>
+
+          <p>
+            <strong>Job security sentiment.</strong> A frequency-based prompt -
+            "In the past month, how often have you worried about technology
+            affecting your job?" with response options from Never to Very Often
+            - captures the lived experience of anxiety more accurately than a
+            single satisfaction rating.
+          </p>
+
+          <p>
+            <strong
+              >Psychological safety in the AI context specifically.</strong
+            >
+            A targeted probe such as "I can raise concerns about new technology
+            without fear of being seen as resistant to change" distinguishes
+            between general workplace safety and the specific vulnerability
+            employees feel during digital transitions - which is often different
+            and more acute.
+          </p>
+
+          <p>
+            <strong>Open-ended prompts in writing.</strong> "What is your
+            biggest concern about how AI will change your work?" consistently
+            produces richer, more candid responses from introverted and quiet
+            employees than any meeting, focus group, or town hall. Introverts
+            process internally and express themselves more fully in writing. A
+            Likert scale captures the trend; the open text box captures the
+            story behind it.
+          </p>
+
+          <h2>Five design changes that actually reach quiet contributors</h2>
+
+          <p>
+            <strong>Guarantee and communicate anonymity explicitly.</strong> The
+            APA found 87% of employees share more honest feedback when anonymity
+            is assured and clearly communicated - not implied. In hierarchical
+            cultures across India, the Gulf, and East Africa, this is not
+            optional. It is the precondition for any honest signal at all.
+          </p>
+
+          <p>
+            <strong
+              >Deploy short, frequent pulses rather than long annual
+              surveys.</strong
+            >
+            Surveys with one to three questions see 83% completion rates. The
+            length signal matters: a short survey says "your time is respected
+            and we want to hear from you regularly." A 60-question annual survey
+            says the opposite, and quiet employees disengage before reaching the
+            questions that matter most.
+          </p>
+
+          <p>
+            <strong>Use multiple delivery channels.</strong> Meet employees
+            where they are - email, mobile, intranet, Slack - rather than
+            requiring them to seek out a feedback mechanism. Reducing friction
+            is how you reach disengaged and introverted workers who will not
+            voluntarily seek out participation opportunities on their own.
+          </p>
+
+          <p>
+            <strong
+              >Pair quantitative scales with written open-ended
+              questions.</strong
+            >
+            Do not choose one or the other. The scale tells you the direction
+            and magnitude. The open text tells you the context, the nuance, and
+            the specific concern that the scale cannot surface. For quiet
+            contributors, the text box is often where they first say something
+            they have been holding for months.
+          </p>
+
+          <p>
+            <strong
+              >Act visibly on results - within weeks, not quarters.</strong
+            >
+            Only 8% of employees globally believe their company acts on survey
+            feedback. That number should alarm any HR leader running a listening
+            programme. Nothing silences quiet contributors more permanently than
+            asking and then ignoring. Close the loop explicitly: share what you
+            found, name the specific change being made, and track progress in
+            the next pulse. When employees see that their input moved something,
+            participation becomes self-sustaining.
+          </p>
+
+          <h2>The listening gap is the leadership gap</h2>
+
+          <p>
+            AI anxiety in India, across the Middle East, and across Africa is
+            reshaping what employee engagement means. It is no longer about
+            whether people are satisfied with their perks or happy with their
+            manager. It is about whether they feel safe enough to stay, adapt,
+            and contribute in a world where their role may look fundamentally
+            different within five years. And the employees who matter most to
+            your organisation's stability - the quiet contributors who hold
+            operational knowledge, absorb complexity, and keep things running
+            without recognition - are the ones your current surveys are least
+            likely to reach.
+          </p>
+
+          <p>
+            Organisations that redesign their listening infrastructure to
+            measure AI trust and job security sentiment, guarantee anonymity,
+            and create written channels for employees who do not speak up in
+            rooms will not just capture better data. They will retain the people
+            who hold everything together - precisely at the moment when that
+            retention matters most.
+          </p>
+        </div>
+      </article>
+    </main>
+
+    <!-- Contact Section -->
+    <section
+      id="contact"
+      class="py-16 bg-gradient-to-br from-gray-900 to-gray-800 text-white"
+    >
+      <div class="container mx-auto px-6">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-10">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">
+              Are You Facing These Challenges?
+            </h2>
+            <p class="text-xl text-gray-300">
+              If these issues sound familiar, you're not alone. We can help.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <div class="space-y-3">
+              <div
+                class="challenge-item bg-gray-800 p-5 rounded-xl flex items-start"
+              >
+                <i class="fas fa-chart-line text-red-400 text-xl mr-4 mt-1"></i>
+                <div>
+                  <h4 class="font-bold text-lg mb-1">
+                    Low Employee Productivity
+                  </h4>
+                  <p class="text-gray-400 text-sm">
+                    Teams underperforming against targets
+                  </p>
+                </div>
+              </div>
+              <div
+                class="challenge-item bg-gray-800 p-5 rounded-xl flex items-start"
+              >
+                <i
+                  class="fas fa-user-slash text-orange-400 text-xl mr-4 mt-1"
+                ></i>
+                <div>
+                  <h4 class="font-bold text-lg mb-1">Disengaged Employees</h4>
+                  <p class="text-gray-400 text-sm">
+                    Workforce lacks motivation and connection
+                  </p>
+                </div>
+              </div>
+              <div
+                class="challenge-item bg-gray-800 p-5 rounded-xl flex items-start"
+              >
+                <i
+                  class="fas fa-door-open text-yellow-400 text-xl mr-4 mt-1"
+                ></i>
+                <div>
+                  <h4 class="font-bold text-lg mb-1">High Attrition Rates</h4>
+                  <p class="text-gray-400 text-sm">
+                    Constant turnover disrupting operations
+                  </p>
+                </div>
+              </div>
+              <div
+                class="challenge-item bg-gray-800 p-5 rounded-xl flex items-start"
+              >
+                <i
+                  class="fas fa-dollar-sign text-green-400 text-xl mr-4 mt-1"
+                ></i>
+                <div>
+                  <h4 class="font-bold text-lg mb-1">Escalating HR Costs</h4>
+                  <p class="text-gray-400 text-sm">
+                    HR overhead growing faster than business
+                  </p>
+                </div>
+              </div>
+              <div
+                class="challenge-item bg-gray-800 p-5 rounded-xl flex items-start"
+              >
+                <i
+                  class="fas fa-exclamation-circle text-red-500 text-xl mr-4 mt-1"
+                ></i>
+                <div>
+                  <h4 class="font-bold text-lg mb-1">Employee Grievances</h4>
+                  <p class="text-gray-400 text-sm">
+                    Unresolved conflicts affecting morale
+                  </p>
+                </div>
+              </div>
+              <div
+                class="challenge-item bg-gray-800 p-5 rounded-xl flex items-start"
+              >
+                <i class="fas fa-gavel text-purple-400 text-xl mr-4 mt-1"></i>
+                <div>
+                  <h4 class="font-bold text-lg mb-1">Compliance Concerns</h4>
+                  <p class="text-gray-400 text-sm">
+                    Struggling with changing labor laws
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="bg-white rounded-2xl shadow-2xl p-8">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">
+                  Get A Free Consultation
+                </h3>
+                <p class="text-gray-600 text-center mb-6">
+                  Fill out the form and we'll get back to you within 24 hours.
+                </p>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                  <input
+                    type="hidden"
+                    name="access_key"
+                    value="b592370f-3f74-4d15-89fd-66d2030e5cc4"
+                  />
+                  <input
+                    type="text"
+                    name="name"
+                    required
+                    placeholder="Your Name"
+                    class="w-full px-4 py-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:border-teal-500 text-gray-800"
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    placeholder="Your Email"
+                    class="w-full px-4 py-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:border-teal-500 text-gray-800"
+                  />
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Your Phone"
+                    class="w-full px-4 py-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:border-teal-500 text-gray-800"
+                  />
+                  <textarea
+                    name="message"
+                    required
+                    placeholder="Tell us about your HR challenges..."
+                    rows="4"
+                    class="w-full px-4 py-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:border-teal-500 text-gray-800"
+                  ></textarea>
+                  <button
+                    type="submit"
+                    class="w-full text-white py-4 rounded-lg font-semibold transition transform hover:scale-105"
+                    style="background-color: #32829b"
+                  >
+                    Get Free Consultation
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-8">
+          <div>
+            <h4 class="text-xl font-semibold mb-4">Our Services</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="https://tamarohr.com/payroll-outsourcing/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-400 hover:text-white transition"
+                  >Outsourced HR Operations</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://tamarohr.com/employee-survey-services/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-400 hover:text-white transition"
+                  >HR Consulting</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://tamarohr.com/fractional-chro/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-400 hover:text-white transition"
+                  >Fractional CHRO</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://tamarohr.com/executive-search/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-400 hover:text-white transition"
+                  >Executive Search</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://tamarohr.com/contract-temp-staffing/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-400 hover:text-white transition"
+                  >Contract Staffing</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="https://tamarohr.com/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-400 hover:text-white transition"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://tamarohr.com/about-us/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-400 hover:text-white transition"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://tamarohr.com/blog/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-400 hover:text-white transition"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://tamarohr.com/privacy-policy/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-400 hover:text-white transition"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Tamãrõ HR</h3>
+            <p class="text-gray-400 mb-4">
+              Professional HR outsourcing services to help your business grow.
+              25+ years of excellence in India, Africa and Gulf Countries.
+            </p>
+            <!-- <div class="flex items-center text-gray-400 mb-4">
+              <i class="fas fa-phone mr-3"></i
+              ><a href="tel:+919825273486" class="hover:text-white transition"
+                >+91 98251 73486</a
+              >
+            </div> -->
+            <div class="flex items-center text-gray-400 mb-6">
+              <i class="fas fa-map-marker-alt mr-3"></i
+              ><span>Ahmedabad, Gujarat, India</span>
+            </div>
+            <div class="flex space-x-4">
+              <a
+                href="https://www.facebook.com/tamarohr/"
+                target="_blank"
+                rel="noopener"
+                class="text-gray-400 hover:text-white transition text-2xl"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a
+                href="https://www.youtube.com/@tamarohr"
+                target="_blank"
+                rel="noopener"
+                class="text-gray-400 hover:text-white transition text-2xl"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/company/tamarohr/"
+                target="_blank"
+                rel="noopener"
+                class="text-gray-400 hover:text-white transition text-2xl"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400"
+        >
+          <p>&copy; 2020-2026 Tamãrõ HR. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a
+      href="https://wa.me/919825173486?text=Hi"
+      target="_blank"
+      rel="noopener"
+      aria-label="Chat on WhatsApp"
+      class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+    >
+      <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <script>
+      document
+        .getElementById("mobileMenuBtn")
+        .addEventListener("click", function () {
+          document.getElementById("mobileMenu").classList.toggle("hidden");
+        });
+
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth" });
+            document.getElementById("mobileMenu").classList.add("hidden");
+          }
+        });
+      });
+
+      function toggleExpand(id, btn) {
+        const el = document.getElementById(id);
+        const expanded = el.classList.toggle("expanded");
+        btn.classList.toggle("expanded", expanded);
+        btn.querySelector("span").textContent = expanded
+          ? "Read less"
+          : "Read more";
+      }
+
+      let currentTestimonial = 0;
+      const testimonials = document.querySelectorAll(".testimonial");
+      const dots = document.querySelectorAll(".testimonial-dot");
+
+      function showTestimonial(index) {
+        testimonials.forEach((t, i) =>
+          t.classList.toggle("active", i === index),
+        );
+        dots.forEach(
+          (d, i) =>
+            (d.style.backgroundColor = i === index ? "#32829b" : "#d1d5db"),
+        );
+      }
+
+      let interval = setInterval(() => {
+        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+        showTestimonial(currentTestimonial);
+      }, 5000);
+
+      dots.forEach((dot) => {
+        dot.addEventListener("click", () => {
+          clearInterval(interval);
+          currentTestimonial = parseInt(dot.dataset.index);
+          showTestimonial(currentTestimonial);
+          interval = setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(currentTestimonial);
+          }, 5000);
+        });
+      });
+
+      showTestimonial(0);
+    </script>
+  </body>
+</html>

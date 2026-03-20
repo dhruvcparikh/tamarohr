@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://tamarohr.com/assets/favicon-32x32.svg"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://tamarohr.com/assets/favicon-32x32.svg"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://tamarohr.com/assets/apple-touch-icon.png"
+    />
+    <link rel="shortcut icon" href="https://tamarohr.com/assets/favicon.ico" />
+    <title>Thank You - Survey Completed</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+        background: #f8f9fa;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .container {
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07),
+          0 10px 20px rgba(0, 0, 0, 0.05);
+        max-width: 560px;
+        width: 100%;
+        overflow: hidden;
+        animation: fadeIn 0.4s ease;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .content {
+        padding: 56px 40px;
+        text-align: center;
+      }
+
+      .success-icon {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 28px;
+        animation: scaleIn 0.5s ease 0.2s both;
+      }
+
+      @keyframes scaleIn {
+        from {
+          transform: scale(0);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+
+      .success-icon svg {
+        width: 40px;
+        height: 40px;
+        stroke: white;
+        stroke-width: 3;
+      }
+
+      h1 {
+        font-size: 28px;
+        font-weight: 600;
+        color: #111827;
+        margin-bottom: 12px;
+      }
+
+      .message {
+        color: #6b7280;
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 36px;
+        max-width: 440px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .info-box {
+        background: #f0fdf4;
+        border-radius: 12px;
+        padding: 24px;
+        text-align: left;
+      }
+
+      .info-box h3 {
+        font-size: 15px;
+        font-weight: 600;
+        color: #065f46;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .info-icon {
+        width: 20px;
+        height: 20px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .info-icon svg {
+        width: 20px;
+        height: 20px;
+        stroke: #10b981;
+        stroke-width: 2;
+      }
+
+      .info-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .info-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        font-size: 14px;
+        color: #047857;
+        line-height: 1.5;
+      }
+
+      .check-icon {
+        width: 20px;
+        height: 20px;
+        min-width: 20px;
+        background: #10b981;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2px;
+      }
+
+      .check-icon svg {
+        width: 12px;
+        height: 12px;
+        stroke: white;
+        stroke-width: 3;
+      }
+
+      @media (max-width: 640px) {
+        .content {
+          padding: 48px 24px;
+        }
+
+        h1 {
+          font-size: 24px;
+        }
+
+        .message {
+          font-size: 15px;
+        }
+
+        .success-icon {
+          width: 64px;
+          height: 64px;
+        }
+
+        .success-icon svg {
+          width: 32px;
+          height: 32px;
+        }
+
+        .container {
+          border-radius: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <div class="success-icon">
+          <svg fill="none" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M5 13l4 4L19 7"
+            />
+          </svg>
+        </div>
+
+        <h1>Thank You!</h1>
+        <p class="message">
+          Your responses have been recorded successfully. Your feedback is
+          valuable and will help improve workplace engagement.
+        </p>
+
+        <div class="info-box">
+          <h3>
+            <span class="info-icon">
+              <svg fill="none" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </span>
+            What happens next?
+          </h3>
+          <div class="info-list">
+            <div class="info-item">
+              <div class="check-icon">
+                <svg fill="none" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              </div>
+              <span>Your responses are anonymous and confidential</span>
+            </div>
+            <div class="info-item">
+              <div class="check-icon">
+                <svg fill="none" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              </div>
+              <span>Results will be compiled and analyzed</span>
+            </div>
+            <div class="info-item">
+              <div class="check-icon">
+                <svg fill="none" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              </div>
+              <span
+                >Survey creator will receive aggregated insights in 2
+                weeks</span
+              >
+            </div>
+            <div class="info-item">
+              <div class="check-icon">
+                <svg fill="none" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              </div>
+              <span>Your input helps create a better workplace</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

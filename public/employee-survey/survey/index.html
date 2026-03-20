@@ -1,0 +1,1464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://tamarohr.com/assets/favicon-32x32.svg"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://tamarohr.com/assets/favicon-32x32.svg"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://tamarohr.com/assets/apple-touch-icon.png"
+    />
+    <link rel="shortcut icon" href="https://tamarohr.com/assets/favicon.ico" />
+    <title>Employee Engagement Survey</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+        background: #f8f9fa;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 700px;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07),
+          0 10px 20px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+        animation: fadeIn 0.4s ease;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .header {
+        background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+        color: white;
+        padding: 32px;
+        text-align: center;
+      }
+
+      .header h1 {
+        font-size: 26px;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+
+      .header p {
+        font-size: 14px;
+        opacity: 0.95;
+      }
+
+      .content {
+        padding: 0;
+        height: 100%;
+      }
+
+      .progress-container {
+        padding: 24px 32px 0 32px;
+      }
+
+      .progress-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+      }
+
+      .progress-text {
+        font-size: 13px;
+        font-weight: 600;
+        color: #6366f1;
+      }
+
+      .progress-bar {
+        background: #e5e7eb;
+        height: 4px;
+        border-radius: 2px;
+        overflow: hidden;
+      }
+
+      .progress-fill {
+        background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 100%);
+        height: 100%;
+        width: 0%;
+        transition: width 0.3s ease;
+      }
+
+      /* Instructions Screen */
+      .instructions-screen {
+        padding: 40px 32px;
+        display: none;
+      }
+
+      .instructions-screen.active {
+        display: block;
+      }
+
+      .instructions-icon {
+        width: 64px;
+        height: 64px;
+        background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 24px;
+      }
+
+      .instructions-icon svg {
+        width: 32px;
+        height: 32px;
+        stroke: white;
+        stroke-width: 2;
+      }
+
+      .instructions-screen h2 {
+        font-size: 22px;
+        font-weight: 600;
+        color: #111827;
+        margin-bottom: 16px;
+        text-align: center;
+      }
+
+      .instructions-list {
+        background: #f9fafb;
+        border-radius: 12px;
+        padding: 24px;
+        margin-bottom: 24px;
+      }
+
+      .instructions-list li {
+        color: #4b5563;
+        font-size: 15px;
+        line-height: 1.8;
+        margin-bottom: 12px;
+        padding-left: 8px;
+      }
+
+      .instructions-list li:last-child {
+        margin-bottom: 0;
+      }
+
+      /* Question Screen */
+      .question-screen {
+        padding: 32px;
+        min-height: 420px;
+        display: none;
+        flex-direction: column;
+      }
+
+      .question-screen.active {
+        display: flex;
+      }
+
+      .question-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .question-text {
+        font-size: 20px;
+        font-weight: 600;
+        color: #111827;
+        margin-bottom: 32px;
+        line-height: 1.5;
+        text-align: center;
+      }
+
+      .options {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .option {
+        position: relative;
+      }
+
+      .option input[type="radio"] {
+        position: absolute;
+        opacity: 0;
+      }
+
+      .option label {
+        display: block;
+        padding: 16px 20px;
+        background: #f9fafb;
+        border: 2px solid #e5e7eb;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        font-size: 15px;
+        color: #374151;
+        text-align: center;
+        font-weight: 500;
+      }
+
+      .option input[type="radio"]:checked + label {
+        background: #eef2ff;
+        border-color: #6366f1;
+        color: #6366f1;
+        font-weight: 600;
+        transform: scale(1.02);
+      }
+
+      .option label:hover {
+        border-color: #d1d5db;
+        background: #f3f4f6;
+      }
+
+      .option input[type="radio"]:checked + label:hover {
+        background: #eef2ff;
+        border-color: #6366f1;
+      }
+
+      /* Navigation */
+      .navigation {
+        display: flex;
+        gap: 12px;
+        margin-top: 32px;
+        padding-top: 24px;
+        border-top: 1px solid #f3f4f6;
+      }
+
+      .btn {
+        flex: 1;
+        padding: 14px 24px;
+        border: none;
+        border-radius: 10px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+        color: white;
+      }
+
+      .btn-primary:hover:not(:disabled) {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+      }
+
+      .btn-primary:active:not(:disabled) {
+        transform: translateY(0);
+      }
+
+      .btn-primary:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+
+      .btn-secondary {
+        background: white;
+        color: #6b7280;
+        border: 2px solid #e5e7eb;
+      }
+
+      .btn-secondary:hover {
+        background: #f9fafb;
+        border-color: #d1d5db;
+      }
+
+      .btn-icon {
+        display: inline-block;
+        margin-right: 6px;
+      }
+
+      /* Already Completed Screen */
+      .completed-screen {
+        padding: 60px 32px;
+        text-align: center;
+        display: none;
+      }
+
+      .completed-screen.active {
+        display: block;
+      }
+
+      .completed-icon {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 24px;
+      }
+
+      .completed-icon svg {
+        width: 40px;
+        height: 40px;
+        stroke: white;
+        stroke-width: 3;
+      }
+
+      .completed-screen h2 {
+        font-size: 24px;
+        font-weight: 600;
+        color: #111827;
+        margin-bottom: 12px;
+      }
+
+      .completed-screen p {
+        color: #6b7280;
+        font-size: 15px;
+        line-height: 1.6;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      /* Loading State */
+      .loading {
+        text-align: center;
+        padding: 60px 20px;
+      }
+
+      .loading-spinner {
+        width: 48px;
+        height: 48px;
+        border: 4px solid #f3f4f6;
+        border-top-color: #6366f1;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin: 0 auto 20px;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .loading p {
+        color: #9ca3af;
+        font-size: 14px;
+      }
+
+      /* Error Message */
+      .error-screen {
+        padding: 60px 32px;
+        text-align: center;
+        display: none;
+      }
+
+      .error-screen.active {
+        display: block;
+      }
+
+      .error-icon {
+        width: 64px;
+        height: 64px;
+        background: #fef2f2;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+      }
+
+      .error-icon svg {
+        width: 32px;
+        height: 32px;
+        stroke: #ef4444;
+        stroke-width: 2;
+      }
+
+      .error-screen h2 {
+        font-size: 20px;
+        font-weight: 600;
+        color: #111827;
+        margin-bottom: 12px;
+      }
+
+      .error-screen p {
+        color: #6b7280;
+        font-size: 15px;
+        line-height: 1.6;
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 640px) {
+        .container {
+          border-radius: 16px;
+        }
+
+        .header {
+          padding: 24px 20px;
+        }
+
+        .header h1 {
+          font-size: 22px;
+        }
+
+        .header p {
+          font-size: 13px;
+        }
+
+        .progress-container {
+          padding: 20px 20px 0 20px;
+        }
+
+        .question-screen {
+          padding: 24px 20px;
+          min-height: 380px;
+        }
+
+        .question-text {
+          font-size: 18px;
+          margin-bottom: 24px;
+        }
+
+        .options {
+          gap: 10px;
+        }
+
+        .option label {
+          padding: 14px 16px;
+          font-size: 14px;
+        }
+
+        .navigation {
+          margin-top: 24px;
+          padding-top: 20px;
+        }
+
+        .btn {
+          padding: 12px 20px;
+          font-size: 14px;
+        }
+
+        .instructions-screen {
+          padding: 32px 20px;
+        }
+
+        .completed-screen {
+          padding: 48px 20px;
+        }
+
+        .error-screen {
+          padding: 48px 20px;
+        }
+      }
+
+      /* Tablet adjustments */
+      @media (min-width: 641px) and (max-height: 800px) {
+        .question-screen {
+          min-height: 360px;
+        }
+
+        .question-text {
+          margin-bottom: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Employee Engagement Survey</h1>
+        <p>Your responses are anonymous and confidential</p>
+      </div>
+
+      <div class="content">
+        <!-- Loading State -->
+        <div id="loadingState" class="loading">
+          <div class="loading-spinner"></div>
+          <p>Loading survey...</p>
+        </div>
+
+        <!-- Error Screen -->
+        <div id="errorScreen" class="error-screen">
+          <div class="error-icon">
+            <svg fill="none" viewBox="0 0 24 24">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+              />
+            </svg>
+          </div>
+          <h2 id="errorTitle">Error</h2>
+          <p id="errorMessage"></p>
+        </div>
+
+        <!-- Already Completed Screen -->
+        <div id="completedScreen" class="completed-screen">
+          <div class="completed-icon">
+            <svg fill="none" viewBox="0 0 24 24">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5 13l4 4L19 7"
+              />
+            </svg>
+          </div>
+          <h2>Already Completed</h2>
+          <p>
+            You have already submitted your response to this survey. Thank you
+            for your valuable feedback!
+          </p>
+        </div>
+
+        <!-- Instructions Screen -->
+        <div id="instructionsScreen" class="instructions-screen">
+          <div class="instructions-icon">
+            <svg fill="none" viewBox="0 0 24 24">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+          </div>
+          <h2>Before You Begin</h2>
+          <ul class="instructions-list">
+            <li>
+              📋 This survey contains 12 questions about your workplace
+              experience
+            </li>
+            <li>⏱️ It takes approximately 3-5 minutes to complete</li>
+            <li>🔒 Your responses are completely anonymous and confidential</li>
+            <li>
+              ✅ Simply click on your answer to automatically move to the next
+              question
+            </li>
+            <li>↩️ You can go back to change previous answers if needed</li>
+          </ul>
+          <button class="btn btn-primary" id="startSurveyBtn">
+            Start Survey
+          </button>
+        </div>
+
+        <!-- Survey Form -->
+        <div id="surveyForm" style="display: none">
+          <div class="progress-container">
+            <div class="progress-info">
+              <span class="progress-text" id="progressText"
+                >Question 1 of 12</span
+              >
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" id="progressBar"></div>
+            </div>
+          </div>
+
+          <form id="questionsForm">
+            <!-- Question 1 -->
+            <div class="question-screen active" data-question="1">
+              <div class="question-content">
+                <div class="question-text">
+                  I know what is expected of me at work.
+                </div>
+                <div class="options">
+                  <div class="option">
+                    <input
+                      type="radio"
+                      name="q1"
+                      id="q1-5"
+                      value="5"
+                      required
+                    />
+                    <label for="q1-5">Strongly Agree</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q1" id="q1-4" value="4" />
+                    <label for="q1-4">Agree</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q1" id="q1-3" value="3" />
+                    <label for="q1-3">Neutral</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q1" id="q1-2" value="2" />
+                    <label for="q1-2">Disagree</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q1" id="q1-1" value="1" />
+                    <label for="q1-1">Strongly Disagree</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="navigation">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  id="prevBtn1"
+                  style="display: none"
+                >
+                  <span class="btn-icon">←</span>Previous
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="nextBtn1"
+                  disabled
+                >
+                  Next<span class="btn-icon">→</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question-screen" data-question="2">
+              <div class="question-content">
+                <div class="question-text">
+                  I have the materials and equipment I need to do my work right.
+                </div>
+                <div class="options">
+                  <div class="option">
+                    <input
+                      type="radio"
+                      name="q2"
+                      id="q2-5"
+                      value="5"
+                      required
+                    />
+                    <label for="q2-5">Strongly Agree</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q2" id="q2-4" value="4" />
+                    <label for="q2-4">Agree</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q2" id="q2-3" value="3" />
+                    <label for="q2-3">Neutral</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q2" id="q2-2" value="2" />
+                    <label for="q2-2">Disagree</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q2" id="q2-1" value="1" />
+                    <label for="q2-1">Strongly Disagree</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="navigation">
+                <button type="button" class="btn btn-secondary" id="prevBtn2">
+                  <span class="btn-icon">←</span>Previous
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="nextBtn2"
+                  disabled
+                >
+                  Next<span class="btn-icon">→</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question-screen" data-question="3">
+              <div class="question-content">
+                <div class="question-text">
+                  At work, I have the opportunity to do what I do best every
+                  day.
+                </div>
+                <div class="options">
+                  <div class="option">
+                    <input
+                      type="radio"
+                      name="q3"
+                      id="q3-5"
+                      value="5"
+                      required
+                    />
+                    <label for="q3-5">Strongly Agree</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q3" id="q3-4" value="4" />
+                    <label for="q3-4">Agree</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q3" id="q3-3" value="3" />
+                    <label for="q3-3">Neutral</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q3" id="q3-2" value="2" />
+                    <label for="q3-2">Disagree</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q3" id="q3-1" value="1" />
+                    <label for="q3-1">Strongly Disagree</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="navigation">
+                <button type="button" class="btn btn-secondary" id="prevBtn3">
+                  <span class="btn-icon">←</span>Previous
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="nextBtn3"
+                  disabled
+                >
+                  Next<span class="btn-icon">→</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question-screen" data-question="4">
+              <div class="question-content">
+                <div class="question-text">
+                  In the last seven days, I have received recognition or praise
+                  for doing good work.
+                </div>
+                <div class="options">
+                  <div class="option">
+                    <input
+                      type="radio"
+                      name="q4"
+                      id="q4-5"
+                      value="5"
+                      required
+                    />
+                    <label for="q4-5">Strongly Agree</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q4" id="q4-4" value="4" />
+                    <label for="q4-4">Agree</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q4" id="q4-3" value="3" />
+                    <label for="q4-3">Neutral</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q4" id="q4-2" value="2" />
+                    <label for="q4-2">Disagree</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q4" id="q4-1" value="1" />
+                    <label for="q4-1">Strongly Disagree</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="navigation">
+                <button type="button" class="btn btn-secondary" id="prevBtn4">
+                  <span class="btn-icon">←</span>Previous
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="nextBtn4"
+                  disabled
+                >
+                  Next<span class="btn-icon">→</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question-screen" data-question="5">
+              <div class="question-content">
+                <div class="question-text">
+                  My supervisor, or someone at work, seems to care about me as a
+                  person.
+                </div>
+                <div class="options">
+                  <div class="option">
+                    <input
+                      type="radio"
+                      name="q5"
+                      id="q5-5"
+                      value="5"
+                      required
+                    />
+                    <label for="q5-5">Strongly Agree</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q5" id="q5-4" value="4" />
+                    <label for="q5-4">Agree</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q5" id="q5-3" value="3" />
+                    <label for="q5-3">Neutral</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q5" id="q5-2" value="2" />
+                    <label for="q5-2">Disagree</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q5" id="q5-1" value="1" />
+                    <label for="q5-1">Strongly Disagree</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="navigation">
+                <button type="button" class="btn btn-secondary" id="prevBtn5">
+                  <span class="btn-icon">←</span>Previous
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="nextBtn5"
+                  disabled
+                >
+                  Next<span class="btn-icon">→</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question-screen" data-question="6">
+              <div class="question-content">
+                <div class="question-text">
+                  There is someone at work who encourages my development.
+                </div>
+                <div class="options">
+                  <div class="option">
+                    <input
+                      type="radio"
+                      name="q6"
+                      id="q6-5"
+                      value="5"
+                      required
+                    />
+                    <label for="q6-5">Strongly Agree</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q6" id="q6-4" value="4" />
+                    <label for="q6-4">Agree</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q6" id="q6-3" value="3" />
+                    <label for="q6-3">Neutral</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q6" id="q6-2" value="2" />
+                    <label for="q6-2">Disagree</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q6" id="q6-1" value="1" />
+                    <label for="q6-1">Strongly Disagree</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="navigation">
+                <button type="button" class="btn btn-secondary" id="prevBtn6">
+                  <span class="btn-icon">←</span>Previous
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="nextBtn6"
+                  disabled
+                >
+                  Next<span class="btn-icon">→</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="question-screen" data-question="7">
+              <div class="question-content">
+                <div class="question-text">
+                  At work, my opinions seem to count.
+                </div>
+                <div class="options">
+                  <div class="option">
+                    <input
+                      type="radio"
+                      name="q7"
+                      id="q7-5"
+                      value="5"
+                      required
+                    />
+                    <label for="q7-5">Strongly Agree</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q7" id="q7-4" value="4" />
+                    <label for="q7-4">Agree</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q7" id="q7-3" value="3" />
+                    <label for="q7-3">Neutral</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q7" id="q7-2" value="2" />
+                    <label for="q7-2">Disagree</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q7" id="q7-1" value="1" />
+                    <label for="q7-1">Strongly Disagree</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="navigation">
+                <button type="button" class="btn btn-secondary" id="prevBtn7">
+                  <span class="btn-icon">←</span>Previous
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="nextBtn7"
+                  disabled
+                >
+                  Next<span class="btn-icon">→</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="question-screen" data-question="8">
+              <div class="question-content">
+                <div class="question-text">
+                  The mission or purpose of my company makes me feel my job is
+                  important.
+                </div>
+                <div class="options">
+                  <div class="option">
+                    <input
+                      type="radio"
+                      name="q8"
+                      id="q8-5"
+                      value="5"
+                      required
+                    />
+                    <label for="q8-5">Strongly Agree</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q8" id="q8-4" value="4" />
+                    <label for="q8-4">Agree</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q8" id="q8-3" value="3" />
+                    <label for="q8-3">Neutral</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q8" id="q8-2" value="2" />
+                    <label for="q8-2">Disagree</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q8" id="q8-1" value="1" />
+                    <label for="q8-1">Strongly Disagree</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="navigation">
+                <button type="button" class="btn btn-secondary" id="prevBtn8">
+                  <span class="btn-icon">←</span>Previous
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="nextBtn8"
+                  disabled
+                >
+                  Next<span class="btn-icon">→</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="question-screen" data-question="9">
+              <div class="question-content">
+                <div class="question-text">
+                  My associates or fellow employees are committed to doing
+                  quality work.
+                </div>
+                <div class="options">
+                  <div class="option">
+                    <input
+                      type="radio"
+                      name="q9"
+                      id="q9-5"
+                      value="5"
+                      required
+                    />
+                    <label for="q9-5">Strongly Agree</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q9" id="q9-4" value="4" />
+                    <label for="q9-4">Agree</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q9" id="q9-3" value="3" />
+                    <label for="q9-3">Neutral</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q9" id="q9-2" value="2" />
+                    <label for="q9-2">Disagree</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q9" id="q9-1" value="1" />
+                    <label for="q9-1">Strongly Disagree</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="navigation">
+                <button type="button" class="btn btn-secondary" id="prevBtn9">
+                  <span class="btn-icon">←</span>Previous
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="nextBtn9"
+                  disabled
+                >
+                  Next<span class="btn-icon">→</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="question-screen" data-question="10">
+              <div class="question-content">
+                <div class="question-text">I have a best friend at work.</div>
+                <div class="options">
+                  <div class="option">
+                    <input
+                      type="radio"
+                      name="q10"
+                      id="q10-5"
+                      value="5"
+                      required
+                    />
+                    <label for="q10-5">Strongly Agree</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q10" id="q10-4" value="4" />
+                    <label for="q10-4">Agree</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q10" id="q10-3" value="3" />
+                    <label for="q10-3">Neutral</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q10" id="q10-2" value="2" />
+                    <label for="q10-2">Disagree</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q10" id="q10-1" value="1" />
+                    <label for="q10-1">Strongly Disagree</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="navigation">
+                <button type="button" class="btn btn-secondary" id="prevBtn10">
+                  <span class="btn-icon">←</span>Previous
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="nextBtn10"
+                  disabled
+                >
+                  Next<span class="btn-icon">→</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Question 11 -->
+            <div class="question-screen" data-question="11">
+              <div class="question-content">
+                <div class="question-text">
+                  In the last six months, someone at work has talked to me about
+                  my progress.
+                </div>
+                <div class="options">
+                  <div class="option">
+                    <input
+                      type="radio"
+                      name="q11"
+                      id="q11-5"
+                      value="5"
+                      required
+                    />
+                    <label for="q11-5">Strongly Agree</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q11" id="q11-4" value="4" />
+                    <label for="q11-4">Agree</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q11" id="q11-3" value="3" />
+                    <label for="q11-3">Neutral</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q11" id="q11-2" value="2" />
+                    <label for="q11-2">Disagree</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q11" id="q11-1" value="1" />
+                    <label for="q11-1">Strongly Disagree</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="navigation">
+                <button type="button" class="btn btn-secondary" id="prevBtn11">
+                  <span class="btn-icon">←</span>Previous
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="nextBtn11"
+                  disabled
+                >
+                  Next<span class="btn-icon">→</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Question 12 -->
+            <div class="question-screen" data-question="12">
+              <div class="question-content">
+                <div class="question-text">
+                  This last year, I have had opportunities at work to learn and
+                  grow.
+                </div>
+                <div class="options">
+                  <div class="option">
+                    <input
+                      type="radio"
+                      name="q12"
+                      id="q12-5"
+                      value="5"
+                      required
+                    />
+                    <label for="q12-5">Strongly Agree</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q12" id="q12-4" value="4" />
+                    <label for="q12-4">Agree</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q12" id="q12-3" value="3" />
+                    <label for="q12-3">Neutral</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q12" id="q12-2" value="2" />
+                    <label for="q12-2">Disagree</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="q12" id="q12-1" value="1" />
+                    <label for="q12-1">Strongly Disagree</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="navigation">
+                <button type="button" class="btn btn-secondary" id="prevBtn12">
+                  <span class="btn-icon">←</span>Previous
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="submitBtn"
+                  disabled
+                >
+                  Submit Survey
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+      import {
+        getFirestore,
+        collection,
+        query,
+        where,
+        getDocs,
+        updateDoc,
+        doc,
+        arrayUnion,
+      } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+      // Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyBiYbhePNSbnv8PnvSm_KIGtsqdZ2JKB8w",
+        authDomain: "tamaro-hr.firebaseapp.com",
+        projectId: "tamaro-hr",
+        storageBucket: "tamaro-hr.firebasestorage.app",
+        messagingSenderId: "870408001370",
+        appId: "1:870408001370:web:f3be6118312c986ced8563",
+        measurementId: "G-EN3FTE223B",
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+
+      // Get survey ID from URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const surveyId = urlParams.get("id");
+
+      if (!surveyId) {
+        window.location.href = "index.html";
+      }
+
+      let currentQuestion = 1;
+      const totalQuestions = 12;
+      let surveyDocId = null;
+      let userFingerprint = null;
+      let isFirstTimeUser = false;
+
+      // Generate browser fingerprint
+      async function generateFingerprint() {
+        const components = [
+          navigator.userAgent,
+          navigator.language,
+          screen.width + "x" + screen.height,
+          new Date().getTimezoneOffset(),
+          navigator.hardwareConcurrency || 0,
+        ];
+
+        const fingerprint = components.join("|");
+        const encoder = new TextEncoder();
+        const data = encoder.encode(fingerprint);
+        const hashBuffer = await crypto.subtle.digest("SHA-256", data);
+        const hashArray = Array.from(new Uint8Array(hashBuffer));
+        return hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
+      }
+
+      // Load survey and check status
+      async function loadSurvey() {
+        try {
+          userFingerprint = await generateFingerprint();
+
+          const surveysRef = collection(db, "surveys");
+          const q = query(surveysRef, where("surveyCode", "==", surveyId));
+          const querySnapshot = await getDocs(q);
+
+          if (querySnapshot.empty) {
+            showError(
+              "Survey Not Found",
+              "This survey link appears to be invalid. Please check your link and try again."
+            );
+            return;
+          }
+
+          const surveyDoc = querySnapshot.docs[0];
+          surveyDocId = surveyDoc.id;
+          const surveyData = surveyDoc.data();
+
+          // Check if user already responded
+          const hasResponded = surveyData.responses?.some(
+            (r) => r.fingerprint === userFingerprint
+          );
+
+          if (hasResponded) {
+            showCompletedScreen();
+            return;
+          }
+
+          // First time user - show instructions
+          isFirstTimeUser = true;
+          showInstructions();
+        } catch (error) {
+          console.error("Error loading survey:", error);
+          showError(
+            "Error Loading Survey",
+            "We encountered an issue loading this survey. Please try again later."
+          );
+        }
+      }
+
+      function showInstructions() {
+        document.getElementById("loadingState").style.display = "none";
+        document.getElementById("instructionsScreen").classList.add("active");
+      }
+
+      function showCompletedScreen() {
+        document.getElementById("loadingState").style.display = "none";
+        document.getElementById("completedScreen").classList.add("active");
+      }
+
+      function showError(title, message) {
+        document.getElementById("loadingState").style.display = "none";
+        document.getElementById("errorTitle").textContent = title;
+        document.getElementById("errorMessage").textContent = message;
+        document.getElementById("errorScreen").classList.add("active");
+      }
+
+      // Start survey button
+      document
+        .getElementById("startSurveyBtn")
+        .addEventListener("click", () => {
+          document
+            .getElementById("instructionsScreen")
+            .classList.remove("active");
+          document.getElementById("surveyForm").style.display = "block";
+          updateProgress();
+        });
+
+      function updateProgress() {
+        const progress = (currentQuestion / totalQuestions) * 100;
+        document.getElementById("progressBar").style.width = progress + "%";
+        document.getElementById(
+          "progressText"
+        ).textContent = `Question ${currentQuestion} of ${totalQuestions}`;
+      }
+
+      function showQuestion(questionNum) {
+        document.querySelectorAll(".question-screen").forEach((card) => {
+          card.classList.remove("active");
+        });
+
+        const card = document.querySelector(`[data-question="${questionNum}"]`);
+        card.classList.add("active");
+
+        currentQuestion = questionNum;
+        updateProgress();
+      }
+
+      // Auto-advance on answer selection
+      function setupAutoAdvance() {
+        for (let i = 1; i <= totalQuestions; i++) {
+          const radios = document.querySelectorAll(`input[name="q${i}"]`);
+          radios.forEach((radio) => {
+            radio.addEventListener("change", () => {
+              // Enable the next button
+              const nextBtn = document.getElementById(
+                i === totalQuestions ? "submitBtn" : `nextBtn${i}`
+              );
+              nextBtn.disabled = false;
+
+              // Auto-advance after short delay (smooth UX)
+              setTimeout(() => {
+                if (i < totalQuestions) {
+                  showQuestion(i + 1);
+                }
+              }, 300);
+            });
+          });
+        }
+      }
+
+      // Navigation buttons
+      function setupNavigation() {
+        for (let i = 1; i <= totalQuestions; i++) {
+          // Previous buttons
+          const prevBtn = document.getElementById(`prevBtn${i}`);
+          if (prevBtn) {
+            prevBtn.addEventListener("click", () => {
+              if (i > 1) {
+                showQuestion(i - 1);
+              }
+            });
+          }
+
+          // Next buttons (manual navigation)
+          const nextBtn = document.getElementById(
+            i === totalQuestions ? "submitBtn" : `nextBtn${i}`
+          );
+          if (nextBtn && i < totalQuestions) {
+            nextBtn.addEventListener("click", () => {
+              showQuestion(i + 1);
+            });
+          }
+        }
+
+        // Submit button
+        document.getElementById("submitBtn").addEventListener("click", () => {
+          submitSurvey();
+        });
+      }
+
+      async function submitSurvey() {
+        const submitBtn = document.getElementById("submitBtn");
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Submitting...";
+
+        try {
+          // Collect all responses
+          const responses = {};
+          for (let i = 1; i <= totalQuestions; i++) {
+            const answer = document.querySelector(
+              `input[name="q${i}"]:checked`
+            );
+            if (!answer) {
+              alert(`Please answer question ${i} before submitting.`);
+              submitBtn.disabled = false;
+              submitBtn.textContent = "Submit Survey";
+              showQuestion(i);
+              return;
+            }
+            responses[`q${i}`] = parseInt(answer.value);
+          }
+
+          const response = {
+            fingerprint: userFingerprint,
+            answers: responses,
+            submittedAt: new Date().toISOString(),
+          };
+
+          // Update Firestore
+          const surveyRef = doc(db, "surveys", surveyDocId);
+          await updateDoc(surveyRef, {
+            responses: arrayUnion(response),
+          });
+
+          // Redirect to thank you page
+          window.location.href = "thankyou.html";
+        } catch (error) {
+          console.error("Error submitting survey:", error);
+          alert("There was an error submitting your survey. Please try again.");
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Submit Survey";
+        }
+      }
+
+      // Initialize
+      setupAutoAdvance();
+      setupNavigation();
+      loadSurvey();
+    </script>
+  </body>
+</html>

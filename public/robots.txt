@@ -1,0 +1,7 @@
+# Robots.txt for tamarohr.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://tamarohr.com/sitemap.xml

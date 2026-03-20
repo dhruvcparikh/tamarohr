@@ -1,0 +1,894 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-PS5Y8JW0L3"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-PS5Y8JW0L3");
+    </script>
+    <title>Blog | Tamãrõ HR</title>
+    <meta
+      name="description"
+      content="Explore HR insights, industry trends, and expert advice from Tamãrõ HR. Stay updated with the latest in payroll, compliance, employee engagement, and HR best practices."
+    />
+    <meta
+      name="keywords"
+      content="HR blog, HR insights, payroll tips, employee engagement, HR compliance India, HR best practices"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://tamarohr.com/blog/" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://tamarohr.com/assets/favicon-32x32.svg"
+    />
+    <link rel="shortcut icon" href="https://tamarohr.com/assets/favicon.ico" />
+
+    <style>
+      :root {
+        --primary: #32829b;
+        --primary-dark: #26667a;
+        --warm-accent: #e87d5c;
+      }
+
+      body {
+        font-family: "Outfit", sans-serif;
+        line-height: 1.6;
+        color: #2c3e50;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Sora", sans-serif;
+        font-weight: 700;
+      }
+
+      .blog-card {
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+      }
+
+      .blog-card:hover {
+        transform: translateY(-8px);
+        border-color: var(--primary);
+        box-shadow: 0 20px 40px rgba(50, 130, 155, 0.15);
+      }
+
+      .blog-card:hover .blog-image img {
+        transform: scale(1.05);
+      }
+
+      .blog-image {
+        overflow: hidden;
+      }
+
+      .blog-image img {
+        transition: transform 0.4s ease;
+      }
+
+      .section-title {
+        position: relative;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(90deg, var(--primary), var(--warm-accent));
+        border-radius: 2px;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <a href="#">
+            <img
+              src="https://tamarohr.com/assets/logo.png"
+              alt="Tamaro HR Consultants Logo"
+              style="height: 28px"
+            />
+          </a>
+          <div class="hidden md:flex space-x-8">
+            <!-- Services Dropdown -->
+            <div class="relative group">
+              <a
+                href="#services"
+                class="text-gray-700 hover:text-teal-600 transition font-medium flex items-center"
+              >
+                Services
+                <i class="fas fa-chevron-down ml-1 text-xs"></i>
+              </a>
+              <div
+                class="absolute left-0 top-full mt-2 w-64 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100"
+              >
+                <div class="py-2">
+                  <a
+                    href="https://tamarohr.com/payroll-outsourcing/"
+                    target="_blank"
+                    class="block px-4 py-3 text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition"
+                  >
+                    <i class="fas fa-money-check-alt mr-2 text-teal-500"></i>
+                    Outsourced HR Operations
+                  </a>
+                  <a
+                    href="https://tamarohr.com/employee-survey-services/"
+                    target="_blank"
+                    class="block px-4 py-3 text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition"
+                  >
+                    <i class="fas fa-poll mr-2 text-teal-500"></i>
+                    HR Consulting
+                  </a>
+                  <a
+                    href="https://tamarohr.com/executive-search/"
+                    target="_blank"
+                    class="block px-4 py-3 text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition"
+                  >
+                    <i class="fas fa-user-tie mr-2 text-teal-500"></i>
+                    Executive Search
+                  </a>
+                  <a
+                    href="https://tamarohr.com/fractional-chro/"
+                    target="_blank"
+                    class="block px-4 py-3 text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition"
+                  >
+                    <i class="fas fa-chess-king mr-2 text-teal-500"></i>
+                    Fractional CHRO
+                  </a>
+                  <a
+                    href="https://tamarohr.com/contract-temp-staffing/"
+                    target="_blank"
+                    class="block px-4 py-3 text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition"
+                  >
+                    <i class="fas fa-users-cog mr-2 text-teal-500"></i>
+                    Contract Staffing
+                  </a>
+                </div>
+              </div>
+            </div>
+            <a
+              href="#contact"
+              class="text-gray-700 hover:text-teal-600 transition font-medium"
+              >Contact</a
+            >
+          </div>
+          <button id="mobileMenuBtn" class="md:hidden text-gray-700">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-2">
+          <div class="border-b border-gray-100 pb-2 mb-2">
+            <p class="text-gray-500 text-sm font-medium mb-2">Services</p>
+            <a
+              href="https://tamarohr.com/payroll-outsourcing/"
+              target="_blank"
+              class="block text-gray-700 hover:text-teal-600 transition pl-4 py-1"
+              >Payroll Outsourcing</a
+            >
+            <a
+              href="https://tamarohr.com/contract-temp-staffing/"
+              target="_blank"
+              class="block text-gray-700 hover:text-teal-600 transition pl-4 py-1"
+              >Contract Staffing</a
+            >
+            <a
+              href="https://tamarohr.com/employee-survey-services/"
+              target="_blank"
+              class="block text-gray-700 hover:text-teal-600 transition pl-4 py-1"
+              >Employee Survey Services</a
+            >
+            <a
+              href="https://tamarohr.com/executive-search/"
+              target="_blank"
+              class="block text-gray-700 hover:text-teal-600 transition pl-4 py-1"
+              >Executive Search</a
+            >
+            <a
+              href="https://tamarohr.com/fractional-chro/"
+              target="_blank"
+              class="block text-gray-700 hover:text-teal-600 transition pl-4 py-1"
+              >Fractional CHRO</a
+            >
+          </div>
+          <a
+            href="#contact"
+            class="block text-gray-700 hover:text-teal-600 transition"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header
+      class="pt-24 pb-12 text-white"
+      style="
+        background: linear-gradient(
+          135deg,
+          var(--primary) 0%,
+          var(--primary-dark) 100%
+        );
+      "
+    >
+      <div class="container mx-auto px-6 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">
+          HR Insights & Resources
+        </h1>
+        <p class="text-gray-100 text-lg max-w-2xl mx-auto">
+          Expert perspectives on HR strategy, compliance, employee engagement,
+          and industry best practices.
+        </p>
+      </div>
+    </header>
+
+    <!-- Blog Grid -->
+    <main class="py-16">
+      <div class="container mx-auto px-6">
+        <div id="blogGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Blog cards will be rendered here by JavaScript -->
+        </div>
+
+        <!-- Empty State -->
+        <div id="emptyState" class="hidden text-center py-16">
+          <i class="fas fa-newspaper text-6xl text-gray-300 mb-4"></i>
+          <p class="text-gray-500 text-xl">
+            No blog posts available yet. Check back soon!
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <!-- Contact Section -->
+    <section
+      id="contact"
+      class="py-16 bg-gradient-to-br from-gray-900 to-gray-800 text-white"
+    >
+      <div class="container mx-auto px-6">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-10">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">
+              Are You Facing These Challenges?
+            </h2>
+            <p class="text-xl text-gray-300">
+              If these issues sound familiar, you're not alone. We can help.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <div class="space-y-3">
+              <div
+                class="challenge-item bg-gray-800 p-5 rounded-xl flex items-start"
+              >
+                <i class="fas fa-chart-line text-red-400 text-xl mr-4 mt-1"></i>
+                <div>
+                  <h4 class="font-bold text-lg mb-1">
+                    Low Employee Productivity
+                  </h4>
+                  <p class="text-gray-400 text-sm">
+                    Teams underperforming against targets
+                  </p>
+                </div>
+              </div>
+              <div
+                class="challenge-item bg-gray-800 p-5 rounded-xl flex items-start"
+              >
+                <i
+                  class="fas fa-user-slash text-orange-400 text-xl mr-4 mt-1"
+                ></i>
+                <div>
+                  <h4 class="font-bold text-lg mb-1">Disengaged Employees</h4>
+                  <p class="text-gray-400 text-sm">
+                    Workforce lacks motivation and connection
+                  </p>
+                </div>
+              </div>
+              <div
+                class="challenge-item bg-gray-800 p-5 rounded-xl flex items-start"
+              >
+                <i
+                  class="fas fa-door-open text-yellow-400 text-xl mr-4 mt-1"
+                ></i>
+                <div>
+                  <h4 class="font-bold text-lg mb-1">High Attrition Rates</h4>
+                  <p class="text-gray-400 text-sm">
+                    Constant turnover disrupting operations
+                  </p>
+                </div>
+              </div>
+              <div
+                class="challenge-item bg-gray-800 p-5 rounded-xl flex items-start"
+              >
+                <i
+                  class="fas fa-dollar-sign text-green-400 text-xl mr-4 mt-1"
+                ></i>
+                <div>
+                  <h4 class="font-bold text-lg mb-1">Escalating HR Costs</h4>
+                  <p class="text-gray-400 text-sm">
+                    HR overhead growing faster than business
+                  </p>
+                </div>
+              </div>
+              <div
+                class="challenge-item bg-gray-800 p-5 rounded-xl flex items-start"
+              >
+                <i
+                  class="fas fa-exclamation-circle text-red-500 text-xl mr-4 mt-1"
+                ></i>
+                <div>
+                  <h4 class="font-bold text-lg mb-1">Employee Grievances</h4>
+                  <p class="text-gray-400 text-sm">
+                    Unresolved conflicts affecting morale
+                  </p>
+                </div>
+              </div>
+              <div
+                class="challenge-item bg-gray-800 p-5 rounded-xl flex items-start"
+              >
+                <i class="fas fa-gavel text-purple-400 text-xl mr-4 mt-1"></i>
+                <div>
+                  <h4 class="font-bold text-lg mb-1">Compliance Concerns</h4>
+                  <p class="text-gray-400 text-sm">
+                    Struggling with changing labor laws
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="bg-white rounded-2xl shadow-2xl p-8">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">
+                  Get A Free Consultation
+                </h3>
+                <p class="text-gray-600 text-center mb-6">
+                  Fill out the form and we'll get back to you within 24 hours.
+                </p>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                  <input
+                    type="hidden"
+                    name="access_key"
+                    value="b592370f-3f74-4d15-89fd-66d2030e5cc4"
+                  />
+                  <input
+                    type="text"
+                    name="name"
+                    required
+                    placeholder="Your Name"
+                    class="w-full px-4 py-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:border-teal-500 text-gray-800"
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    placeholder="Your Email"
+                    class="w-full px-4 py-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:border-teal-500 text-gray-800"
+                  />
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Your Phone"
+                    class="w-full px-4 py-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:border-teal-500 text-gray-800"
+                  />
+                  <textarea
+                    name="message"
+                    required
+                    placeholder="Tell us about your HR challenges..."
+                    rows="4"
+                    class="w-full px-4 py-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:border-teal-500 text-gray-800"
+                  ></textarea>
+                  <button
+                    type="submit"
+                    class="w-full text-white py-4 rounded-lg font-semibold transition transform hover:scale-105"
+                    style="background-color: #32829b"
+                  >
+                    Get Free Consultation
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-8">
+          <div>
+            <h4 class="text-xl font-semibold mb-4">Our Services</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="https://tamarohr.com/payroll-outsourcing/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-400 hover:text-white transition"
+                  >Outsourced HR Operations</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://tamarohr.com/employee-survey-services/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-400 hover:text-white transition"
+                  >HR Consulting</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://tamarohr.com/fractional-chro/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-400 hover:text-white transition"
+                  >Fractional CHRO</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://tamarohr.com/executive-search/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-400 hover:text-white transition"
+                  >Executive Search</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://tamarohr.com/contract-temp-staffing/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-400 hover:text-white transition"
+                  >Contract Staffing</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="https://tamarohr.com/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-400 hover:text-white transition"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://tamarohr.com/about-us/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-400 hover:text-white transition"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://tamarohr.com/blog/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-400 hover:text-white transition"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://tamarohr.com/privacy-policy/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-400 hover:text-white transition"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Tamãrõ HR</h3>
+            <p class="text-gray-400 mb-4">
+              Professional HR outsourcing services to help your business grow.
+              25+ years of excellence in India, Africa and Gulf Countries.
+            </p>
+            <!-- <div class="flex items-center text-gray-400 mb-4">
+              <i class="fas fa-phone mr-3"></i
+              ><a href="tel:+919825273486" class="hover:text-white transition"
+                >+91 98251 73486</a
+              >
+            </div> -->
+            <div class="flex items-center text-gray-400 mb-6">
+              <i class="fas fa-map-marker-alt mr-3"></i
+              ><span>Ahmedabad, Gujarat, India</span>
+            </div>
+            <div class="flex space-x-4">
+              <a
+                href="https://www.facebook.com/tamarohr/"
+                target="_blank"
+                rel="noopener"
+                class="text-gray-400 hover:text-white transition text-2xl"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a
+                href="https://www.youtube.com/@tamarohr"
+                target="_blank"
+                rel="noopener"
+                class="text-gray-400 hover:text-white transition text-2xl"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/company/tamarohr/"
+                target="_blank"
+                rel="noopener"
+                class="text-gray-400 hover:text-white transition text-2xl"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400"
+        >
+          <p>&copy; 2020-2026 Tamãrõ HR. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a
+      href="https://wa.me/919825173486?text=Hi"
+      target="_blank"
+      rel="noopener"
+      aria-label="Chat on WhatsApp"
+      class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+    >
+      <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <script>
+      document
+        .getElementById("mobileMenuBtn")
+        .addEventListener("click", function () {
+          document.getElementById("mobileMenu").classList.toggle("hidden");
+        });
+
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth" });
+            document.getElementById("mobileMenu").classList.add("hidden");
+          }
+        });
+      });
+
+      function toggleExpand(id, btn) {
+        const el = document.getElementById(id);
+        const expanded = el.classList.toggle("expanded");
+        btn.classList.toggle("expanded", expanded);
+        btn.querySelector("span").textContent = expanded
+          ? "Read less"
+          : "Read more";
+      }
+
+      let currentTestimonial = 0;
+      const testimonials = document.querySelectorAll(".testimonial");
+      const dots = document.querySelectorAll(".testimonial-dot");
+
+      function showTestimonial(index) {
+        testimonials.forEach((t, i) =>
+          t.classList.toggle("active", i === index),
+        );
+        dots.forEach(
+          (d, i) =>
+            (d.style.backgroundColor = i === index ? "#32829b" : "#d1d5db"),
+        );
+      }
+
+      let interval = setInterval(() => {
+        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+        showTestimonial(currentTestimonial);
+      }, 5000);
+
+      dots.forEach((dot) => {
+        dot.addEventListener("click", () => {
+          clearInterval(interval);
+          currentTestimonial = parseInt(dot.dataset.index);
+          showTestimonial(currentTestimonial);
+          interval = setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(currentTestimonial);
+          }, 5000);
+        });
+      });
+
+      showTestimonial(0);
+    </script>
+
+    <script>
+      // Blog data in JSON format
+      // Add, edit, or remove blog entries here
+      const blogData = [
+        {
+          id: 1,
+          title:
+            "Unlocking Potential: How A to Z Industries Transformed Leadership and Operations",
+          preview:
+            "In the heart of Tanzania, A to Z Industries has established itself as a manufacturing giant, employing over 8,500 individuals. However, despite its vast resources, the company faced a major issue: leadership entangled in daily operations instead of focusing on strategic growth. With more than 120 expatriate managers, the board found itself overwhelmed, leading to a production capacity stagnating at just 50% in some units.",
+          image:
+            "./unlocking-potential-how-a-to-z-industries-transformed-leadership-and-operations/factory-workshop.webp",
+          url: "https://tamarohr.com/blog/unlocking-potential-how-a-to-z-industries-transformed-leadership-and-operations/",
+          publishedDate: "2025-12-27",
+          category: "Case Study",
+        },
+        {
+          id: 2,
+          title: "Why are your employees leaving?",
+          preview:
+            "This is a major problem, which is not only faced by startups and MSMEs but is also faced by large companies. Today's generation of young employees, especially Gen Z, have great potential to add value to your business but at the same time most organisations fail to understand what is really required to attract and retain top talent.",
+          image: "./why-are-your-employees-leaving/employee-leaving.webp",
+          url: "https://tamarohr.com/blog/why-are-your-employees-leaving/",
+          publishedDate: "2025-12-20",
+          category: "HR Insights",
+        },
+        {
+          id: 3,
+          title: "Is HR only for large companies?",
+          preview:
+            "Larger companies tend to set aside an entire department to handle the gamut of HR functions. Depending on the size of the organisation, there would be levels of management hierarchy. Each HR function would be handled by one or more persons, as per the requirement.",
+          image: "./is-hr-only-for-large-companies/hr-for-companies.webp",
+          url: "https://tamarohr.com/blog/is-hr-only-for-large-companies/",
+          publishedDate: "2025-12-13",
+          category: "Management",
+        },
+        {
+          id: 4,
+          title: "Evolution of HR",
+          preview:
+            "Human Resource Management (HRM), popularly known as HR is the strategic approach to the effective and efficient management of people in a company or organisation such that they help their business gain a competitive advantage.",
+          image: "./evolution-of-hr/evolution-of-hr.webp",
+          url: "https://tamarohr.com/blog/evolution-of-hr/",
+          publishedDate: "2025-12-06",
+          category: "HR Insights",
+        },
+        {
+          id: 5,
+          title: "Taking the outsourcing decision",
+          preview:
+            "You started a business because you are good at something and it interests you, say a bakery. After achieving initial success you started expanding your business, your product line and your team. Soon you realized that you were involved with multiple aspects of the business and you neither had the time nor the inclination to do them.",
+          image:
+            "./taking-the-outsourcing-decision/hr-operations-outsourcing.webp",
+          url: "https://tamarohr.com/blog/taking-the-outsourcing-decision/",
+          publishedDate: "2025-11-29",
+          category: "Management",
+        },
+        {
+          id: 6,
+          title: "Outsourcing HR functions",
+          preview:
+            "Today, almost any function can be outsourced- from Sales, Marketing, Operations, Customer Service to Human Resources. Once you determine the core of your business, you may decide to outsource everything else. One of the most common and easiest functions which can be outsourced is Human Resources. The top reasons why companies outsource HR are highlighted in the graphic below.",
+          image: "./outsourcing-hr-functions/outsourcing-hr.webp",
+          url: "https://tamarohr.com/blog/outsourcing-hr-functions/",
+          publishedDate: "2025-11-22",
+          category: "Management",
+        },
+        {
+          id: 7,
+          title: "Agentic AI in HR: From Chatbots to Autonomous Workflows",
+          preview:
+            "According to PwC's analysis of 300+ HR subprocesses, AI agents can now enable over 88% of administrative HR workflows - the routine transactions, forms, and reporting that Deloitte estimates already consume up to 57% of an HR professional's working day. Production-ready AI agents are live today inside Workday, Oracle, SAP, and India's own Darwinbox. For small and mid-sized organisations that have historically lacked the budget for a full HR department, this shift matters more than it does for large enterprises.",
+          image: "./agentic-ai-hr-automation/agentic-ai-for-hr-automation.avif",
+          url: "https://tamarohr.com/blog/agentic-ai-hr-automation/",
+          publishedDate: "2026-01-03",
+          category: "HR Insights",
+        },
+        {
+          id: 8,
+          title: "Skills Over Pedigree: Hiring for What People Can Do",
+          preview:
+            "In 2025, 85% of employers globally now use skills-based hiring practices - up from just 56% in 2022. Yet a landmark 2024 study by Harvard Business School and the Burning Glass Institute found that fewer than 1 in 700 hires have actually benefited from these degree-removal policies. The announcements are real. The execution, in most companies, is not. For small and mid-sized businesses where every hire is high-stakes and recruitment budgets are tight, the distinction between policy and practice matters enormously.",
+          image: "./skills-based-hiring/skill-based-hiring.avif",
+          url: "https://tamarohr.com/blog/skills-based-hiring/",
+          publishedDate: "2026-01-10",
+          category: "Talent Management",
+        },
+        {
+          id: 9,
+          title:
+            "Returnship Programs: The Business Case for Bringing Women Back",
+          preview:
+            "The 2026 International Women's Day theme is 'Give to Gain' - and the framing is deliberately commercial. When organisations invest in women's workforce re-entry, the returns compound. McKinsey estimates $12 trillion could be added to global GDP by closing gender gaps in economic participation. There are an estimated 96 million skilled women aged 30 to 54 currently on career breaks worldwide, with roughly 55 million having mid-manager experience or above. The talent is available. The question is whether your hiring process is designed to find it.",
+          image: "./returnship-programs/women-returning-to-work.avif",
+          url: "https://tamarohr.com/blog/returnship-programs/",
+          publishedDate: "2026-01-17",
+          category: "HR Insights",
+        },
+        {
+          id: 10,
+          title: "Wellbeing as Infrastructure, Not a Perk",
+          preview:
+            "Companies globally spend over $65 billion every year on employee wellness programmes - and the outcomes keep getting worse. Gallup's 2025 State of the Global Workplace report, drawn from 250,000 workers across 160 countries, found global engagement has collapsed to 21% - matching pandemic lows. Only 33% of employees are thriving. The spending goes up. The suffering goes up alongside it. McKinsey, Gallup, Deloitte, the WHO, and Oxford researchers have all independently arrived at the same explanation: organisations are treating symptoms while leaving the systemic workplace conditions that cause harm entirely intact.",
+          image: "./wellbeing-as-infrastructure/employee-wellbeing.avif",
+          url: "https://tamarohr.com/blog/wellbeing-as-infrastructure/",
+          publishedDate: "2026-01-24",
+          category: "HR Insights",
+        },
+        {
+          id: 11,
+          title: "Safety in 2026: Physical, Psychological, and Digital",
+          preview:
+            "This March marks a historic first for workplace safety in India. The National Safety Council of India has expanded what was previously a single observance week into a full National Safety Month - and the 55th edition coincides with NSCI's Diamond Jubilee, sixty years since its founding in 1966. The 2026 theme, 'Engage, Educate & Empower People to Enhance Safety,' is deliberately people-centric rather than process-centric. Its three verbs signal a decisive shift toward a culture where every person in an organisation is an active participant in keeping it safe - across physical, psychological, and digital dimensions alike.",
+          image:
+            "./workplace-safety-physical-psychological-digital/workplace-safety.avif",
+          url: "https://tamarohr.com/blog/workplace-safety-physical-psychological-digital/",
+          publishedDate: "2026-01-31",
+          category: "Compliance",
+        },
+        {
+          id: 12,
+          title: "Your Annual Engagement Survey Is Already Obsolete",
+          preview:
+            "By the time your annual employee engagement survey results land on the leadership team's desk, the data is already dead. In India's fast-moving market - where 88% of employees are already using AI at work and Gen Z makes up over a quarter of the workforce - feedback that is six to twelve months old is not insight. ADP Research reports that Indian employee engagement fell from 24% to 19% in a single year - the steepest drop of any country tracked. The annual survey is not just slow. It is broken.",
+          image:
+            "./annual-survey-obsolete-monthly-pulse/survey-form-research-employees.jpg",
+          url: "https://tamarohr.com/blog/annual-survey-obsolete-monthly-pulse/",
+          publishedDate: "2026-02-07",
+          category: "HR Insights",
+        },
+        {
+          id: 13,
+          title:
+            "Measuring the Unseen: Engaging Quiet Contributors in an AI-Driven World",
+          preview:
+            "74% of India's workforce fears AI could replace their jobs. That is not a fringe concern - it is the majority of your people, according to Microsoft's Work Trend Index. And the employees most rattled by this shift are not the ones raising their hands in town halls. They are your quiet contributors - the steady, reliable backbone of your organisation - and most engagement surveys are not designed to reach them. Research shows a mere 15% of employees deliver 50% of organisational impact, and many of these high-impact individuals operate in silence.",
+          image:
+            "./engaging-quiet-contributors-ai-surveys/engaging-quiet-contributors-ai-surveys.avif",
+          url: "https://tamarohr.com/blog/engaging-quiet-contributors-ai-surveys/",
+          publishedDate: "2026-02-14",
+          category: "HR Insights",
+        },
+        {
+          id: 14,
+          title:
+            "Engaging Bharat: Customising Feedback Loops for Distributed Teams in Tier-2 Cities",
+          preview:
+            "India's workforce is not just going remote - it is going home. Over 35% of India's remote workforce now operates from Tier-2 and Tier-3 cities, and the shift is accelerating. Tier-2 cities saw a 42% rise in job openings between September 2024 and February 2025, dwarfing the 19% growth metros managed in the same period. For HR leaders still running engagement from a single metro playbook, this is a structural problem: what works at your Bengaluru headquarters will not work for your Jaipur hub - and the data you need to understand the difference is almost certainly hidden inside a company-wide average.",
+          image:
+            "./engaging-bharat-tier-2-city-distributed-teams/engaging-bharat-tier-2-city-distributed-teams.jpg",
+          url: "https://tamarohr.com/blog/engaging-bharat-tier-2-city-distributed-teams/",
+          publishedDate: "2026-02-21",
+          category: "HR Insights",
+        },
+        {
+          id: 15,
+          title:
+            "From Presence to Performance: The Case for Diagnostic Engagement Surveys",
+          preview:
+            "India's employee engagement has fallen to 19% - the steepest single-year decline of any country globally. At the same time, 51% of Indian employees work more than 49 hours per week, among the longest hours of any workforce in the world. The problem is not that people are not trying. The problem is that the conditions around their work are blocking performance - and most engagement surveys are not designed to find those blockages. They are designed to measure mood. Traditional surveys ask 'How do you feel?' Diagnostic enablement surveys ask 'Do you have what you need to succeed?'",
+          image:
+            "./diagnostic-surveys-outcome-based-engagement/diagnostic-surveys-outcome-based-engagement.jpg",
+          url: "https://tamarohr.com/blog/diagnostic-surveys-outcome-based-engagement/",
+          publishedDate: "2026-02-28",
+          category: "HR Insights",
+        },
+      ];
+
+      // Function to format date
+      function formatDate(dateString) {
+        const options = { year: "numeric", month: "long", day: "numeric" };
+        return new Date(dateString).toLocaleDateString("en-IN", options);
+      }
+
+      // Function to truncate text to 140 characters
+      function truncateText(text, maxLength = 140) {
+        if (text.length <= maxLength) return text;
+        return text.substring(0, maxLength).trim() + "...";
+      }
+
+      // Function to render blog cards
+      function renderBlogs() {
+        const blogGrid = document.getElementById("blogGrid");
+        const emptyState = document.getElementById("emptyState");
+
+        if (blogData.length === 0) {
+          blogGrid.classList.add("hidden");
+          emptyState.classList.remove("hidden");
+          return;
+        }
+
+        // Sort blogs by published date (descending - newest first)
+        const sortedBlogs = blogData.sort(
+          (a, b) => new Date(b.publishedDate) - new Date(a.publishedDate),
+        );
+
+        // Render each blog card
+        const blogCards = sortedBlogs
+          .map(
+            (blog) => `
+          <article class="blog-card bg-white rounded-2xl shadow-lg overflow-hidden">
+            <div class="blog-image h-48">
+              <img
+                src="${blog.image}"
+                alt="${blog.title}"
+                class="w-full h-full object-cover"
+                onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27200%27%3E%3Crect fill=%27%23e2e8f0%27 width=%27400%27 height=%27200%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%2394a3b8%27 font-family=%27sans-serif%27 font-size=%2716%27%3EImage Not Available%3C/text%3E%3C/svg%3E'"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-semibold px-3 py-1 rounded-full" style="background-color: rgba(50, 130, 155, 0.1); color: #32829b;">
+                  ${blog.category}
+                </span>
+                <span class="text-xs text-gray-500">
+                  <i class="far fa-calendar-alt mr-1"></i>${formatDate(
+                    blog.publishedDate,
+                  )}
+                </span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3 line-clamp-2" style="min-height: 56px;">
+                ${blog.title}
+              </h3>
+              <p class="text-gray-600 text-sm mb-4" style="min-height: 60px;">
+                ${truncateText(blog.preview, 140)}
+              </p>
+              <a
+                href="${blog.url}"
+                target="_blank"
+                rel="noopener"
+                class="inline-flex items-center font-semibold transition hover:gap-3"
+                style="color: #32829b; gap: 8px;"
+              >
+                Read More <i class="fas fa-arrow-right text-sm"></i>
+              </a>
+            </div>
+          </article>
+        `,
+          )
+          .join("");
+
+        blogGrid.innerHTML = blogCards;
+      }
+
+      // Render blogs on page load
+      document.addEventListener("DOMContentLoaded", renderBlogs);
+    </script>
+  </body>
+</html>

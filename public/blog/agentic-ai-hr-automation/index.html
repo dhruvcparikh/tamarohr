@@ -1,0 +1,1071 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-PS5Y8JW0L3"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-PS5Y8JW0L3");
+    </script>
+    <title>Agentic AI in HR: From Chatbots to Autonomous Workflows</title>
+    <meta
+      name="description"
+      content="Agentic AI can automate over 88% of HR admin tasks. Learn how it differs from chatbots, what it can handle today, and how HR leaders should govern it."
+    />
+    <meta name="author" content="Tamãrõ HR Consultants" />
+    <meta name="robots" content="index, follow" />
+    <link
+      rel="canonical"
+      href="https://tamarohr.com/blog/agentic-ai-hr-automation/"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://tamarohr.com/assets/favicon-32x32.svg"
+    />
+    <link rel="shortcut icon" href="https://tamarohr.com/assets/favicon.ico" />
+
+    <style>
+      :root {
+        --primary: #32829b;
+        --primary-dark: #26667a;
+        --warm-accent: #e87d5c;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Outfit", sans-serif;
+        line-height: 1.6;
+        color: #2c3e50;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Sora", sans-serif;
+        font-weight: 700;
+      }
+
+      /* Blog Content Styles */
+      .blog-content h2 {
+        font-size: 1.75rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        color: #1a202c;
+      }
+      .blog-content h3 {
+        font-size: 1.375rem;
+        margin-top: 2rem;
+        margin-bottom: 0.75rem;
+        color: #2d3748;
+      }
+      .blog-content h4 {
+        font-size: 1.125rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: #4a5568;
+      }
+      .blog-content p {
+        margin-bottom: 1.25rem;
+        color: #4a5568;
+        line-height: 1.8;
+      }
+      .blog-content ul,
+      .blog-content ol {
+        margin-bottom: 1.25rem;
+        padding-left: 1.5rem;
+        color: #4a5568;
+      }
+      .blog-content ul {
+        list-style-type: disc;
+      }
+      .blog-content ol {
+        list-style-type: decimal;
+      }
+      .blog-content li {
+        margin-bottom: 0.5rem;
+        line-height: 1.7;
+      }
+      .blog-content blockquote {
+        border-left: 4px solid var(--primary);
+        padding-left: 1.5rem;
+        margin: 1.5rem 0;
+        font-style: italic;
+        color: #718096;
+      }
+      .blog-content a {
+        color: var(--primary);
+        text-decoration: underline;
+      }
+      .blog-content a:hover {
+        color: var(--primary-dark);
+      }
+      .blog-content strong {
+        font-weight: 600;
+        color: #2d3748;
+      }
+      .blog-content img {
+        border-radius: 0.75rem;
+        margin: 1.5rem 0;
+      }
+      .blog-content hr {
+        border: none;
+        border-top: 1px solid #e2e8f0;
+        margin: 2rem 0;
+      }
+      .blog-content table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+      }
+      .blog-content th,
+      .blog-content td {
+        border: 1px solid #e2e8f0;
+        padding: 0.75rem 1rem;
+        text-align: left;
+      }
+      .blog-content th {
+        background-color: #f7fafc;
+        font-weight: 600;
+      }
+      .blog-content code {
+        background-color: #f7fafc;
+        padding: 0.125rem 0.375rem;
+        border-radius: 0.25rem;
+        font-size: 0.875rem;
+        font-family: monospace;
+      }
+      .blog-content pre {
+        background-color: #1a202c;
+        color: #e2e8f0;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        overflow-x: auto;
+        margin: 1.5rem 0;
+      }
+      .blog-content pre code {
+        background: none;
+        padding: 0;
+        color: inherit;
+      }
+      .stat-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1rem;
+        margin: 1.5rem 0 2rem;
+      }
+      .stat-card {
+        background: linear-gradient(135deg, #e0f2f1 0%, #f0f9ff 100%);
+        border: 1px solid #b2dfdb;
+        border-radius: 0.75rem;
+        padding: 1.25rem 1rem;
+        text-align: center;
+      }
+      .stat-card .stat-number {
+        font-family: "Sora", sans-serif;
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--primary);
+        line-height: 1.1;
+        display: block;
+        margin-bottom: 0.35rem;
+      }
+      .stat-card .stat-label {
+        font-size: 0.8rem;
+        color: #4a5568;
+        line-height: 1.4;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <a href="#">
+            <img
+              src="https://tamarohr.com/assets/logo.png"
+              alt="Tamaro HR Consultants Logo"
+              style="height: 28px"
+            />
+          </a>
+          <div class="hidden md:flex space-x-8">
+            <!-- Services Dropdown -->
+            <div class="relative group">
+              <a
+                href="#services"
+                class="text-gray-700 hover:text-teal-600 transition font-medium flex items-center"
+              >
+                Services
+                <i class="fas fa-chevron-down ml-1 text-xs"></i>
+              </a>
+              <div
+                class="absolute left-0 top-full mt-2 w-64 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100"
+              >
+                <div class="py-2">
+                  <a
+                    href="https://tamarohr.com/payroll-outsourcing/"
+                    target="_blank"
+                    class="block px-4 py-3 text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition"
+                  >
+                    <i class="fas fa-money-check-alt mr-2 text-teal-500"></i>
+                    Outsourced HR Operations
+                  </a>
+                  <a
+                    href="https://tamarohr.com/employee-survey-services/"
+                    target="_blank"
+                    class="block px-4 py-3 text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition"
+                  >
+                    <i class="fas fa-poll mr-2 text-teal-500"></i>
+                    HR Consulting
+                  </a>
+                  <a
+                    href="https://tamarohr.com/executive-search/"
+                    target="_blank"
+                    class="block px-4 py-3 text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition"
+                  >
+                    <i class="fas fa-user-tie mr-2 text-teal-500"></i>
+                    Executive Search
+                  </a>
+                  <a
+                    href="https://tamarohr.com/fractional-chro/"
+                    target="_blank"
+                    class="block px-4 py-3 text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition"
+                  >
+                    <i class="fas fa-chess-king mr-2 text-teal-500"></i>
+                    Fractional CHRO
+                  </a>
+                  <a
+                    href="https://tamarohr.com/contract-temp-staffing/"
+                    target="_blank"
+                    class="block px-4 py-3 text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition"
+                  >
+                    <i class="fas fa-users-cog mr-2 text-teal-500"></i>
+                    Contract Staffing
+                  </a>
+                </div>
+              </div>
+            </div>
+            <a
+              href="#contact"
+              class="text-gray-700 hover:text-teal-600 transition font-medium"
+              >Contact</a
+            >
+          </div>
+          <button id="mobileMenuBtn" class="md:hidden text-gray-700">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-2">
+          <div class="border-b border-gray-100 pb-2 mb-2">
+            <p class="text-gray-500 text-sm font-medium mb-2">Services</p>
+            <a
+              href="https://tamarohr.com/payroll-outsourcing/"
+              target="_blank"
+              class="block text-gray-700 hover:text-teal-600 transition pl-4 py-1"
+              >Payroll Outsourcing</a
+            >
+            <a
+              href="https://tamarohr.com/contract-temp-staffing/"
+              target="_blank"
+              class="block text-gray-700 hover:text-teal-600 transition pl-4 py-1"
+              >Contract Staffing</a
+            >
+            <a
+              href="https://tamarohr.com/employee-survey-services/"
+              target="_blank"
+              class="block text-gray-700 hover:text-teal-600 transition pl-4 py-1"
+              >Employee Survey Services</a
+            >
+            <a
+              href="https://tamarohr.com/executive-search/"
+              target="_blank"
+              class="block text-gray-700 hover:text-teal-600 transition pl-4 py-1"
+              >Executive Search</a
+            >
+            <a
+              href="https://tamarohr.com/fractional-chro/"
+              target="_blank"
+              class="block text-gray-700 hover:text-teal-600 transition pl-4 py-1"
+              >Fractional CHRO</a
+            >
+          </div>
+          <a
+            href="#contact"
+            class="block text-gray-700 hover:text-teal-600 transition"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Blog Post Header -->
+    <header class="pt-24 bg-white">
+      <div class="container mx-auto px-6 py-12 max-w-4xl">
+        <!-- Category & Date -->
+        <div class="flex items-center gap-4 mb-4">
+          <span
+            class="inline-block px-3 py-1 text-sm font-medium rounded-full"
+            style="background-color: #e0f2f1; color: #32829b"
+            >HR Insights</span
+          >
+          <span class="text-gray-500 text-sm">
+            <i class="far fa-calendar-alt mr-1"></i>
+            January 03, 2026
+          </span>
+          <span class="text-gray-500 text-sm">
+            <i class="far fa-clock mr-1"></i>
+            7 min read
+          </span>
+        </div>
+
+        <!-- Title -->
+        <h1
+          class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight"
+        >
+          Agentic AI in HR: From Chatbots to Autonomous Workflows
+        </h1>
+
+        <!-- Author -->
+        <div class="flex items-center">
+          <img
+            src="https://tamarohr.com/assets/HR Consultant Chetan Parikh.webp"
+            alt="Chetan Parikh"
+            class="w-12 h-12 rounded-full mr-4 object-cover"
+          />
+          <div>
+            <p class="font-medium text-gray-800">Chetan Parikh</p>
+            <p class="text-sm text-gray-500">HR Consultant</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Cover Image -->
+    <div class="container mx-auto px-6 max-w-4xl">
+      <img
+        src="./agentic-ai-for-hr-automation.avif"
+        alt="Agentic AI automating HR administrative workflows in a modern workplace"
+        class="w-full h-auto rounded-2xl shadow-lg"
+      />
+    </div>
+
+    <!-- Blog Content -->
+    <main class="container mx-auto px-6 py-12 max-w-4xl">
+      <article class="bg-white rounded-2xl shadow-sm p-8 md:p-12">
+        <div class="blog-content">
+          <p>
+            According to PwC's analysis of 300+ HR subprocesses, AI agents can
+            now enable over 88% of administrative HR workflows - the routine
+            transactions, forms, and reporting that Deloitte estimates already
+            consume up to 57% of an HR professional's working day. That is not a
+            forecast. Production-ready AI agents are live today inside Workday,
+            Oracle, SAP, and India's own Darwinbox. IBM's AskHR system resolves
+            10.1 million HR interactions every year, saving the company 50,000
+            hours and $5 million annually.
+          </p>
+
+          <p>
+            For business owners and HR leaders at small and mid-sized
+            organisations - the ones who have historically lacked the budget for
+            a full HR department - this shift matters more than it does for
+            large enterprises. Agentic AI does not require a team of specialists
+            to operate. It requires thoughtful governance. The question is no
+            longer whether to take notice, but how to use these tools
+            responsibly.
+          </p>
+
+          <div class="stat-grid">
+            <div class="stat-card">
+              <span class="stat-number">88%</span>
+              <span class="stat-label"
+                >of administrative HR workflows automatable by AI agents
+                (PwC)</span
+              >
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">57%</span>
+              <span class="stat-label"
+                >of HR time currently spent on admin tasks (Deloitte)</span
+              >
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">60-70%</span>
+              <span class="stat-label"
+                >reduction in admin time possible with AI (McKinsey)</span
+              >
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">43%</span>
+              <span class="stat-label"
+                >of HR teams now using AI - up from 26% in 2024 (SHRM)</span
+              >
+            </div>
+          </div>
+
+          <h2>What makes agentic AI different from a chatbot</h2>
+
+          <p>
+            The distinction is important for anyone evaluating HR technology. A
+            chatbot responds to a single query with a fixed answer - "Your leave
+            balance is 12 days." An agentic AI system handles the entire
+            workflow on its own: it checks leave eligibility against company
+            policy, verifies the employee's balance, submits the application,
+            updates the HR system, notifies the manager, adjusts the payroll
+            calendar, and schedules a follow-up - all from a single
+            natural-language request.
+          </p>
+
+          <p>
+            Analyst firm Gartner has specifically warned against "agentwashing"
+            - vendors rebranding simple chatbots as "agents." True agentic AI
+            requires autonomous reasoning, multi-step task execution,
+            cross-system integration, and the ability to adapt based on
+            outcomes. HR leaders evaluating vendors should demand this
+            distinction clearly, rather than accepting marketing language at
+            face value.
+          </p>
+
+          <p>
+            HR thought leader Josh Bersin frames the shift plainly: earlier
+            chatbots were essentially "information retrieval" tools, whereas
+            agentic AI "becomes a co-worker itself - listening, learning,
+            reasoning, and acting." The practical implication is significant. In
+            recruitment, for example, a chatbot schedules interviews. An AI
+            agent autonomously generates job descriptions, sources candidates,
+            screens resumes, ranks applicants, and conducts initial assessments.
+          </p>
+
+          <h2>What agentic AI can handle today</h2>
+
+          <p>
+            Based on production deployments across major platforms as of early
+            2026, the following HR tasks have documented end-to-end automation
+            capabilities:
+          </p>
+
+          <p>
+            <strong>Onboarding orchestration.</strong> Darwinbox's Super Agent
+            and Rippling coordinate system provisioning, laptop ordering,
+            training assignment, meeting scheduling, and IT access setup from a
+            single trigger. Rippling's customer Clay reported automating 80% of
+            onboarding tasks and growing 5x in 18 months. Deloitte finds that
+            automated onboarding can result in a 50% reduction in time to
+            productivity for new hires.
+          </p>
+
+          <p>
+            <strong>Payroll query resolution.</strong> SAP's Joule AI allows
+            employees to query their payslip in plain language. SAP notes that
+            approximately half of all HR help desk tickets are payroll-related -
+            making this one of the highest impact automation targets for any HR
+            function of any size.
+          </p>
+
+          <p>
+            <strong>Leave management.</strong> Multiple platforms - Workday,
+            Zoho People, Moveworks, and Darwinbox - now offer end-to-end leave
+            processing: employee request via natural language, policy check,
+            balance verification, submission, manager notification, and calendar
+            blocking. No manual steps. No email chains.
+          </p>
+
+          <p>
+            <strong>Recruitment screening and scheduling.</strong> Oracle's
+            Career Coach Agent provides 24/7 candidate assistance, qualification
+            screening, and expedited applications. Workday's Recruiter Agent
+            automates sourcing, screening, and matching. Bersin's research finds
+            AI-assisted recruitment delivers 2-3x faster hiring with stronger
+            candidate quality.
+          </p>
+
+          <p>
+            <strong>Performance review preparation.</strong> SAP's Performance
+            and Goals Agent gathers employee goals, achievements, and peer
+            feedback; creates tailored talking points for managers; nudges
+            employees to complete self-evaluations; and schedules follow-up
+            meetings - without any HR intervention.
+          </p>
+
+          <p>
+            <strong>Statutory compliance monitoring.</strong> Rippling automates
+            compliance tracking across multiple jurisdictions. Darwinbox handles
+            India-specific statutory compliance requirements including PF, ESIC,
+            and Professional Tax workflows - directly relevant to the compliance
+            burden most Indian SMBs face.
+          </p>
+
+          <h2>Where human judgment remains essential</h2>
+
+          <p>
+            Not everything should be automated, and the strongest AI governance
+            frameworks are explicit about this. Final hiring decisions,
+            terminations, sensitive employee relations matters, complex
+            compliance interpretations, compensation negotiations, and strategic
+            workforce planning all require human oversight. These are the
+            interactions where context, empathy, and accountability cannot be
+            delegated to a system.
+          </p>
+
+          <p>
+            Mercer has warned about "AI slop" - generic, detached AI responses
+            that make employees feel processed rather than heard, and that can
+            actually increase attrition. Applying the same automation logic to a
+            password reset and a bereavement leave request is a governance
+            failure, not a technology limitation. The technology knows no
+            difference. The HR leader must.
+          </p>
+
+          <blockquote>
+            Today HR manages cases, but tomorrow HR will manage AI agents -
+            flipping "human-in-the-loop" into "human-on-the-loop" oversight of
+            intelligent systems. - Dave Ulrich
+          </blockquote>
+
+          <h2>The supervisory role: five responsibilities for HR leaders</h2>
+
+          <p>
+            The emerging model has HR leaders acting as AI governors, not
+            operators. Drawing on frameworks from ADP, EY, and NIST, the
+            supervisory role breaks down into five practical responsibilities.
+          </p>
+
+          <p>
+            <strong>Set the rules for each agent.</strong> Define which actions
+            an AI agent can execute autonomously, which require human approval
+            before proceeding, and which are prohibited entirely. ADP describes
+            this as an "Auto-Execute / Escalate / Block" framework. Without
+            these rules, agents will make decisions you did not intend to
+            delegate.
+          </p>
+
+          <p>
+            <strong>Monitor outcomes, not just activity.</strong> Conduct
+            regular accuracy checks and adverse-impact reviews. Establish
+            thresholds that trigger human review, retraining, or rollback of an
+            agent. An agent that resolves 98% of queries correctly is still
+            making errors in 1 out of 50 interactions - and those errors may
+            cluster around specific employee groups.
+          </p>
+
+          <p>
+            <strong>Own the accountability structure.</strong> Appoint an AI
+            steward with clear responsibility for each AI use case in your HR
+            function. Maintain decision records of what the system recommended
+            versus what was actually acted on. ADP's Helena Almeida is direct:
+            "Ethics is a team sport. Clarify responsibilities early and make it
+            contractual."
+          </p>
+
+          <p>
+            <strong>Protect high-empathy touchpoints.</strong> Identify
+            interactions that require human judgment - conflict resolution,
+            career pathing, bereavement leave, terminations - and ensure no AI
+            agent handles these autonomously. This is a design decision, not an
+            afterthought.
+          </p>
+
+          <p>
+            <strong>Govern your vendors, not just your tools.</strong> Evaluate
+            vendor AI frameworks before signing contracts. Demand explainability
+            - how does the system make its decisions? Require contractual
+            clarity on data use, bias testing, and what happens when the system
+            makes a discriminatory call. Amazon's scrapped AI hiring tool -
+            which systematically discriminated against women because it trained
+            on historically male-dominated data - is a cautionary tale that
+            remains relevant today.
+          </p>
+
+          <h2>
+            What this means for Indian, African, and Middle East businesses
+          </h2>
+
+          <p>
+            India leads the world in workplace AI adoption. EY's Work Reimagined
+            2025 survey found India's AI Adoption Value score is 53 - the
+            highest globally, against a worldwide average of 34. Approximately
+            75% of Indian workers already incorporate AI into their daily roles.
+            Yet only 12% of Indian organisations have implemented agentic AI so
+            far, with that figure projected to reach 58% within two years. The
+            window for early-mover advantage is still open.
+          </p>
+
+          <p>
+            Compliance adds a layer of urgency specific to India. The Digital
+            Personal Data Protection Act 2023 requires explicit consent for
+            processing employee data, with penalties up to Rs. 250 crore per
+            breach. The Act does not yet explicitly address AI-specific risks
+            such as automated decision-making or algorithmic transparency -
+            which means organisations must set their own standards now, before
+            regulators catch up.
+          </p>
+
+          <p>
+            In the Middle East, the UAE's Federal Authority for Government Human
+            Resources launched an HR AI Agent integrating AI directly into
+            federal government HR operations in September 2025. PwC's 2025
+            survey shows 75% of employees in the Middle East now use AI - ahead
+            of the 69% global average. Saudi Arabia's Personal Data Protection
+            Law imposes strict cross-border data transfer restrictions that HR
+            leaders operating across GCC markets must build into their AI
+            governance frameworks from day one.
+          </p>
+
+          <p>
+            Africa presents a different profile - high adoption ambition
+            alongside real infrastructure constraints. Over 45% of Nigerian
+            companies plan to invest in HR automation within two years. Yet
+            fewer than 30% of African businesses currently use cloud-based HR
+            tools. For growing businesses in this market, mobile-first platforms
+            and lighter-weight implementations are the practical starting point,
+            not enterprise-grade agent suites.
+          </p>
+
+          <h2>The practical starting point for growing businesses</h2>
+
+          <p>
+            For a business owner managing HR alongside everything else, the
+            entry point is not to deploy 13 AI agents simultaneously. It is to
+            identify which repetitive HR tasks consume the most time in your
+            organisation right now - typically leave requests, payroll queries,
+            onboarding documentation, and compliance tracking - and evaluate
+            whether a platform you already use has agent capabilities that cover
+            them.
+          </p>
+
+          <p>
+            Zoho People, for example, offers AI-assisted leave automation and
+            sentiment analysis at pricing accessible to Indian and African SMBs.
+            Darwinbox serves organisations from 200 employees upward with
+            India-specific compliance built in. The technology is available at
+            every price point. What separates organisations that benefit from
+            those that struggle is not the tool - it is whether someone in the
+            business has been given clear accountability for how the tool is
+            governed.
+          </p>
+
+          <p>
+            HR outsourcing partners with AI-literate advisory capabilities can
+            accelerate this process considerably - both in identifying the right
+            tools for your context and in building the governance frameworks
+            that keep automation trustworthy. As ADP's Amin Venjara puts it:
+            "Human oversight provides purpose and guardrails. Together, they
+            deliver scalable automation that's trustworthy, compliant and
+            resilient when conditions change."
+          </p>
+
+          <p>
+            The administrative burden that has historically kept HR teams from
+            doing strategic work is genuinely dissolving. The organisations that
+            move thoughtfully - deploying automation where it adds speed and
+            accuracy, while keeping humans firmly in charge of decisions that
+            matter - will find that HR becomes a significantly more powerful
+            lever for business growth than it has ever been.
+          </p>
+        </div>
+      </article>
+    </main>
+
+    <!-- Contact Section -->
+    <section
+      id="contact"
+      class="py-16 bg-gradient-to-br from-gray-900 to-gray-800 text-white"
+    >
+      <div class="container mx-auto px-6">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-10">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">
+              Are You Facing These Challenges?
+            </h2>
+            <p class="text-xl text-gray-300">
+              If these issues sound familiar, you're not alone. We can help.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <div class="space-y-3">
+              <div
+                class="challenge-item bg-gray-800 p-5 rounded-xl flex items-start"
+              >
+                <i class="fas fa-chart-line text-red-400 text-xl mr-4 mt-1"></i>
+                <div>
+                  <h4 class="font-bold text-lg mb-1">
+                    Low Employee Productivity
+                  </h4>
+                  <p class="text-gray-400 text-sm">
+                    Teams underperforming against targets
+                  </p>
+                </div>
+              </div>
+              <div
+                class="challenge-item bg-gray-800 p-5 rounded-xl flex items-start"
+              >
+                <i
+                  class="fas fa-user-slash text-orange-400 text-xl mr-4 mt-1"
+                ></i>
+                <div>
+                  <h4 class="font-bold text-lg mb-1">Disengaged Employees</h4>
+                  <p class="text-gray-400 text-sm">
+                    Workforce lacks motivation and connection
+                  </p>
+                </div>
+              </div>
+              <div
+                class="challenge-item bg-gray-800 p-5 rounded-xl flex items-start"
+              >
+                <i
+                  class="fas fa-door-open text-yellow-400 text-xl mr-4 mt-1"
+                ></i>
+                <div>
+                  <h4 class="font-bold text-lg mb-1">High Attrition Rates</h4>
+                  <p class="text-gray-400 text-sm">
+                    Constant turnover disrupting operations
+                  </p>
+                </div>
+              </div>
+              <div
+                class="challenge-item bg-gray-800 p-5 rounded-xl flex items-start"
+              >
+                <i
+                  class="fas fa-dollar-sign text-green-400 text-xl mr-4 mt-1"
+                ></i>
+                <div>
+                  <h4 class="font-bold text-lg mb-1">Escalating HR Costs</h4>
+                  <p class="text-gray-400 text-sm">
+                    HR overhead growing faster than business
+                  </p>
+                </div>
+              </div>
+              <div
+                class="challenge-item bg-gray-800 p-5 rounded-xl flex items-start"
+              >
+                <i
+                  class="fas fa-exclamation-circle text-red-500 text-xl mr-4 mt-1"
+                ></i>
+                <div>
+                  <h4 class="font-bold text-lg mb-1">Employee Grievances</h4>
+                  <p class="text-gray-400 text-sm">
+                    Unresolved conflicts affecting morale
+                  </p>
+                </div>
+              </div>
+              <div
+                class="challenge-item bg-gray-800 p-5 rounded-xl flex items-start"
+              >
+                <i class="fas fa-gavel text-purple-400 text-xl mr-4 mt-1"></i>
+                <div>
+                  <h4 class="font-bold text-lg mb-1">Compliance Concerns</h4>
+                  <p class="text-gray-400 text-sm">
+                    Struggling with changing labor laws
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="bg-white rounded-2xl shadow-2xl p-8">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">
+                  Get A Free Consultation
+                </h3>
+                <p class="text-gray-600 text-center mb-6">
+                  Fill out the form and we'll get back to you within 24 hours.
+                </p>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                  <input
+                    type="hidden"
+                    name="access_key"
+                    value="b592370f-3f74-4d15-89fd-66d2030e5cc4"
+                  />
+                  <input
+                    type="text"
+                    name="name"
+                    required
+                    placeholder="Your Name"
+                    class="w-full px-4 py-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:border-teal-500 text-gray-800"
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    placeholder="Your Email"
+                    class="w-full px-4 py-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:border-teal-500 text-gray-800"
+                  />
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Your Phone"
+                    class="w-full px-4 py-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:border-teal-500 text-gray-800"
+                  />
+                  <textarea
+                    name="message"
+                    required
+                    placeholder="Tell us about your HR challenges..."
+                    rows="4"
+                    class="w-full px-4 py-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:border-teal-500 text-gray-800"
+                  ></textarea>
+                  <button
+                    type="submit"
+                    class="w-full text-white py-4 rounded-lg font-semibold transition transform hover:scale-105"
+                    style="background-color: #32829b"
+                  >
+                    Get Free Consultation
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-8">
+          <div>
+            <h4 class="text-xl font-semibold mb-4">Our Services</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="https://tamarohr.com/payroll-outsourcing/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-400 hover:text-white transition"
+                  >Outsourced HR Operations</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://tamarohr.com/employee-survey-services/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-400 hover:text-white transition"
+                  >HR Consulting</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://tamarohr.com/fractional-chro/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-400 hover:text-white transition"
+                  >Fractional CHRO</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://tamarohr.com/executive-search/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-400 hover:text-white transition"
+                  >Executive Search</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://tamarohr.com/contract-temp-staffing/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-400 hover:text-white transition"
+                  >Contract Staffing</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="https://tamarohr.com/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-400 hover:text-white transition"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://tamarohr.com/about-us/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-400 hover:text-white transition"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://tamarohr.com/blog/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-400 hover:text-white transition"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://tamarohr.com/privacy-policy/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-400 hover:text-white transition"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Tamãrõ HR</h3>
+            <p class="text-gray-400 mb-4">
+              Professional HR outsourcing services to help your business grow.
+              25+ years of excellence in India, Africa and Gulf Countries.
+            </p>
+            <!-- <div class="flex items-center text-gray-400 mb-4">
+              <i class="fas fa-phone mr-3"></i
+              ><a href="tel:+919825273486" class="hover:text-white transition"
+                >+91 98251 73486</a
+              >
+            </div> -->
+            <div class="flex items-center text-gray-400 mb-6">
+              <i class="fas fa-map-marker-alt mr-3"></i
+              ><span>Ahmedabad, Gujarat, India</span>
+            </div>
+            <div class="flex space-x-4">
+              <a
+                href="https://www.facebook.com/tamarohr/"
+                target="_blank"
+                rel="noopener"
+                class="text-gray-400 hover:text-white transition text-2xl"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a
+                href="https://www.youtube.com/@tamarohr"
+                target="_blank"
+                rel="noopener"
+                class="text-gray-400 hover:text-white transition text-2xl"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/company/tamarohr/"
+                target="_blank"
+                rel="noopener"
+                class="text-gray-400 hover:text-white transition text-2xl"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400"
+        >
+          <p>&copy; 2020-2026 Tamãrõ HR. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a
+      href="https://wa.me/919825173486?text=Hi"
+      target="_blank"
+      rel="noopener"
+      aria-label="Chat on WhatsApp"
+      class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+    >
+      <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <script>
+      document
+        .getElementById("mobileMenuBtn")
+        .addEventListener("click", function () {
+          document.getElementById("mobileMenu").classList.toggle("hidden");
+        });
+
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth" });
+            document.getElementById("mobileMenu").classList.add("hidden");
+          }
+        });
+      });
+
+      function toggleExpand(id, btn) {
+        const el = document.getElementById(id);
+        const expanded = el.classList.toggle("expanded");
+        btn.classList.toggle("expanded", expanded);
+        btn.querySelector("span").textContent = expanded
+          ? "Read less"
+          : "Read more";
+      }
+
+      let currentTestimonial = 0;
+      const testimonials = document.querySelectorAll(".testimonial");
+      const dots = document.querySelectorAll(".testimonial-dot");
+
+      function showTestimonial(index) {
+        testimonials.forEach((t, i) =>
+          t.classList.toggle("active", i === index),
+        );
+        dots.forEach(
+          (d, i) =>
+            (d.style.backgroundColor = i === index ? "#32829b" : "#d1d5db"),
+        );
+      }
+
+      let interval = setInterval(() => {
+        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+        showTestimonial(currentTestimonial);
+      }, 5000);
+
+      dots.forEach((dot) => {
+        dot.addEventListener("click", () => {
+          clearInterval(interval);
+          currentTestimonial = parseInt(dot.dataset.index);
+          showTestimonial(currentTestimonial);
+          interval = setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(currentTestimonial);
+          }, 5000);
+        });
+      });
+
+      showTestimonial(0);
+    </script>
+  </body>
+</html>

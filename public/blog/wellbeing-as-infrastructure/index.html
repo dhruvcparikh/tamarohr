@@ -1,0 +1,1038 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-PS5Y8JW0L3"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-PS5Y8JW0L3");
+    </script>
+    <title>Wellbeing as Infrastructure, Not a Perk</title>
+    <meta
+      name="description"
+      content="Companies spend $65 billion on wellness perks while burnout keeps rising. The research is clear on why - and what actually works instead."
+    />
+    <meta name="author" content="Tamãrõ HR Consultants" />
+    <meta name="robots" content="index, follow" />
+    <link
+      rel="canonical"
+      href="https://tamarohr.com/blog/wellbeing-as-infrastructure/"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://tamarohr.com/assets/favicon-32x32.svg"
+    />
+    <link rel="shortcut icon" href="https://tamarohr.com/assets/favicon.ico" />
+
+    <style>
+      :root {
+        --primary: #32829b;
+        --primary-dark: #26667a;
+        --warm-accent: #e87d5c;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Outfit", sans-serif;
+        line-height: 1.6;
+        color: #2c3e50;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Sora", sans-serif;
+        font-weight: 700;
+      }
+
+      /* Blog Content Styles */
+      .blog-content h2 {
+        font-size: 1.75rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        color: #1a202c;
+      }
+      .blog-content h3 {
+        font-size: 1.375rem;
+        margin-top: 2rem;
+        margin-bottom: 0.75rem;
+        color: #2d3748;
+      }
+      .blog-content h4 {
+        font-size: 1.125rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: #4a5568;
+      }
+      .blog-content p {
+        margin-bottom: 1.25rem;
+        color: #4a5568;
+        line-height: 1.8;
+      }
+      .blog-content ul,
+      .blog-content ol {
+        margin-bottom: 1.25rem;
+        padding-left: 1.5rem;
+        color: #4a5568;
+      }
+      .blog-content ul {
+        list-style-type: disc;
+      }
+      .blog-content ol {
+        list-style-type: decimal;
+      }
+      .blog-content li {
+        margin-bottom: 0.5rem;
+        line-height: 1.7;
+      }
+      .blog-content blockquote {
+        border-left: 4px solid var(--primary);
+        padding-left: 1.5rem;
+        margin: 1.5rem 0;
+        font-style: italic;
+        color: #718096;
+      }
+      .blog-content a {
+        color: var(--primary);
+        text-decoration: underline;
+      }
+      .blog-content a:hover {
+        color: var(--primary-dark);
+      }
+      .blog-content strong {
+        font-weight: 600;
+        color: #2d3748;
+      }
+      .blog-content img {
+        border-radius: 0.75rem;
+        margin: 1.5rem 0;
+      }
+      .blog-content hr {
+        border: none;
+        border-top: 1px solid #e2e8f0;
+        margin: 2rem 0;
+      }
+      .blog-content table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+      }
+      .blog-content th,
+      .blog-content td {
+        border: 1px solid #e2e8f0;
+        padding: 0.75rem 1rem;
+        text-align: left;
+      }
+      .blog-content th {
+        background-color: #f7fafc;
+        font-weight: 600;
+      }
+      .blog-content code {
+        background-color: #f7fafc;
+        padding: 0.125rem 0.375rem;
+        border-radius: 0.25rem;
+        font-size: 0.875rem;
+        font-family: monospace;
+      }
+      .blog-content pre {
+        background-color: #1a202c;
+        color: #e2e8f0;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        overflow-x: auto;
+        margin: 1.5rem 0;
+      }
+      .blog-content pre code {
+        background: none;
+        padding: 0;
+        color: inherit;
+      }
+      .stat-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1rem;
+        margin: 1.5rem 0 2rem;
+      }
+      .stat-card {
+        background: linear-gradient(135deg, #e0f2f1 0%, #f0f9ff 100%);
+        border: 1px solid #b2dfdb;
+        border-radius: 0.75rem;
+        padding: 1.25rem 1rem;
+        text-align: center;
+      }
+      .stat-card .stat-number {
+        font-family: "Sora", sans-serif;
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--primary);
+        line-height: 1.1;
+        display: block;
+        margin-bottom: 0.35rem;
+      }
+      .stat-card .stat-label {
+        font-size: 0.8rem;
+        color: #4a5568;
+        line-height: 1.4;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <a href="#">
+            <img
+              src="https://tamarohr.com/assets/logo.png"
+              alt="Tamaro HR Consultants Logo"
+              style="height: 28px"
+            />
+          </a>
+          <div class="hidden md:flex space-x-8">
+            <!-- Services Dropdown -->
+            <div class="relative group">
+              <a
+                href="#services"
+                class="text-gray-700 hover:text-teal-600 transition font-medium flex items-center"
+              >
+                Services
+                <i class="fas fa-chevron-down ml-1 text-xs"></i>
+              </a>
+              <div
+                class="absolute left-0 top-full mt-2 w-64 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100"
+              >
+                <div class="py-2">
+                  <a
+                    href="https://tamarohr.com/payroll-outsourcing/"
+                    target="_blank"
+                    class="block px-4 py-3 text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition"
+                  >
+                    <i class="fas fa-money-check-alt mr-2 text-teal-500"></i>
+                    Outsourced HR Operations
+                  </a>
+                  <a
+                    href="https://tamarohr.com/employee-survey-services/"
+                    target="_blank"
+                    class="block px-4 py-3 text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition"
+                  >
+                    <i class="fas fa-poll mr-2 text-teal-500"></i>
+                    HR Consulting
+                  </a>
+                  <a
+                    href="https://tamarohr.com/executive-search/"
+                    target="_blank"
+                    class="block px-4 py-3 text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition"
+                  >
+                    <i class="fas fa-user-tie mr-2 text-teal-500"></i>
+                    Executive Search
+                  </a>
+                  <a
+                    href="https://tamarohr.com/fractional-chro/"
+                    target="_blank"
+                    class="block px-4 py-3 text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition"
+                  >
+                    <i class="fas fa-chess-king mr-2 text-teal-500"></i>
+                    Fractional CHRO
+                  </a>
+                  <a
+                    href="https://tamarohr.com/contract-temp-staffing/"
+                    target="_blank"
+                    class="block px-4 py-3 text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition"
+                  >
+                    <i class="fas fa-users-cog mr-2 text-teal-500"></i>
+                    Contract Staffing
+                  </a>
+                </div>
+              </div>
+            </div>
+            <a
+              href="#contact"
+              class="text-gray-700 hover:text-teal-600 transition font-medium"
+              >Contact</a
+            >
+          </div>
+          <button id="mobileMenuBtn" class="md:hidden text-gray-700">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-2">
+          <div class="border-b border-gray-100 pb-2 mb-2">
+            <p class="text-gray-500 text-sm font-medium mb-2">Services</p>
+            <a
+              href="https://tamarohr.com/payroll-outsourcing/"
+              target="_blank"
+              class="block text-gray-700 hover:text-teal-600 transition pl-4 py-1"
+              >Payroll Outsourcing</a
+            >
+            <a
+              href="https://tamarohr.com/contract-temp-staffing/"
+              target="_blank"
+              class="block text-gray-700 hover:text-teal-600 transition pl-4 py-1"
+              >Contract Staffing</a
+            >
+            <a
+              href="https://tamarohr.com/employee-survey-services/"
+              target="_blank"
+              class="block text-gray-700 hover:text-teal-600 transition pl-4 py-1"
+              >Employee Survey Services</a
+            >
+            <a
+              href="https://tamarohr.com/executive-search/"
+              target="_blank"
+              class="block text-gray-700 hover:text-teal-600 transition pl-4 py-1"
+              >Executive Search</a
+            >
+            <a
+              href="https://tamarohr.com/fractional-chro/"
+              target="_blank"
+              class="block text-gray-700 hover:text-teal-600 transition pl-4 py-1"
+              >Fractional CHRO</a
+            >
+          </div>
+          <a
+            href="#contact"
+            class="block text-gray-700 hover:text-teal-600 transition"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Blog Post Header -->
+    <header class="pt-24 bg-white">
+      <div class="container mx-auto px-6 py-12 max-w-4xl">
+        <!-- Category & Date -->
+        <div class="flex items-center gap-4 mb-4">
+          <span
+            class="inline-block px-3 py-1 text-sm font-medium rounded-full"
+            style="background-color: #e0f2f1; color: #32829b"
+            >HR Insights</span
+          >
+          <span class="text-gray-500 text-sm">
+            <i class="far fa-calendar-alt mr-1"></i>
+            January 24, 2026
+          </span>
+          <span class="text-gray-500 text-sm">
+            <i class="far fa-clock mr-1"></i>
+            7 min read
+          </span>
+        </div>
+
+        <!-- Title -->
+        <h1
+          class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight"
+        >
+          Wellbeing as Infrastructure, Not a Perk
+        </h1>
+
+        <!-- Author -->
+        <div class="flex items-center">
+          <img
+            src="https://tamarohr.com/assets/HR Consultant Chetan Parikh.webp"
+            alt="Chetan Parikh"
+            class="w-12 h-12 rounded-full mr-4 object-cover"
+          />
+          <div>
+            <p class="font-medium text-gray-800">Chetan Parikh</p>
+            <p class="text-sm text-gray-500">HR Consultant</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Cover Image -->
+    <div class="container mx-auto px-6 max-w-4xl">
+      <img
+        src="./employee-wellbeing.avif"
+        alt="A calm, thoughtfully designed office environment representing systemic investment in employee wellbeing"
+        class="w-full h-auto rounded-2xl shadow-lg"
+      />
+    </div>
+
+    <!-- Blog Content -->
+    <main class="container mx-auto px-6 py-12 max-w-4xl">
+      <article class="bg-white rounded-2xl shadow-sm p-8 md:p-12">
+        <div class="blog-content">
+          <p>
+            Companies globally spend over $65 billion every year on employee
+            wellness programmes - and the outcomes keep getting worse. Gallup's
+            2025 State of the Global Workplace report, drawn from 250,000
+            workers across 160 countries, found global engagement has collapsed
+            to 21% - matching pandemic lows. Only 33% of employees are thriving.
+            Forty percent experienced significant stress the previous day. Half
+            the global workforce is watching for or actively seeking a new job.
+          </p>
+
+          <p>
+            The spending goes up. The suffering goes up alongside it. This is
+            the paradox that McKinsey, Gallup, Deloitte, the WHO, and Oxford
+            researchers have all independently arrived at the same explanation
+            for: organisations are treating symptoms while leaving the systemic
+            workplace conditions that cause harm entirely intact. You cannot
+            yoga your way out of a broken management culture.
+          </p>
+
+          <div class="stat-grid">
+            <div class="stat-card">
+              <span class="stat-number">59-62%</span>
+              <span class="stat-label"
+                >burnout rate among Indian employees - highest in the world
+                (McKinsey Health Institute)</span
+              >
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">$438B</span>
+              <span class="stat-label"
+                >lost to disengagement in 2024 alone (Gallup)</span
+              >
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">8x</span>
+              <span class="stat-label"
+                >more likely to burn out in a toxic workplace environment
+                (McKinsey)</span
+              >
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">£5.60</span>
+              <span class="stat-label"
+                >returned for every £1 invested in proactive culture-change
+                interventions (Deloitte UK)</span
+              >
+            </div>
+          </div>
+
+          <h2>The perks paradox - why the spending is not working</h2>
+
+          <p>
+            The evidence against individual-level wellness interventions is now
+            rigorous and consistent. A 2024 Oxford University study by William
+            Fleming analysed 46,336 workers and found no evidence that
+            resilience training, mindfulness apps, sleep apps, or relaxation
+            classes improved worker wellbeing. A separate Harvard and University
+            of Chicago randomised controlled trial following 33,000 workers
+            found no statistically significant changes from nutrition, fitness,
+            and stress reduction programmes. The programmes were implemented
+            properly. They simply did not work.
+          </p>
+
+          <p>
+            The structural explanation is straightforward. Deloitte found that
+            while 91% of leaders say they support employee wellbeing, only 38%
+            of employees believe them. And 68% of workers do not use wellbeing
+            resources because accessing them is too time-consuming, confusing,
+            or cumbersome. The gap between the benefit offered and the benefit
+            experienced is itself a symptom of the underlying problem -
+            workplaces where employees are already stretched too thin to use the
+            support they are nominally provided.
+          </p>
+
+          <p>
+            McKinsey Health Institute identified toxic workplace behaviour as
+            the single strongest predictor of burnout, explaining over 60% of
+            variance globally. Employees in toxic environments are 8x more
+            likely to burn out and 6x more likely to leave. No amount of
+            wellness app subscriptions changes that calculation. The cause of
+            the harm is the working conditions. The solution has to be in the
+            working conditions.
+          </p>
+
+          <h2>
+            Where the damage is worst - India, the Middle East, and Africa
+          </h2>
+
+          <p>
+            For Tamaro HR's client base, the regional data makes this argument
+            especially urgent.
+          </p>
+
+          <p>
+            India has the highest burnout rate in the world. McKinsey Health
+            Institute's 30-country survey found Indian employees reporting
+            burnout at 59 to 62%, against a global average of just 20%. Deloitte
+            India's survey of 4,000 employees found 80% experienced symptoms of
+            poor mental health in the prior year, with 47% citing work-related
+            stress as the primary driver. This costs Indian employers
+            approximately $14 billion annually in absenteeism, lower
+            productivity, and attrition. Work stress drives a 21% increase in
+            absenteeism and a 35% drop in productivity in India specifically -
+            numbers that dwarf the cost of any structural intervention a
+            business might make.
+          </p>
+
+          <p>
+            In the Middle East, Cigna Healthcare's 2024 study found 89% of UAE
+            residents report feeling stressed, and 99% experienced at least one
+            burnout symptom. Gallup reports 48% of MENA employees experienced
+            significant daily stress. Two-thirds of UAE respondents said their
+            employers prioritise productivity over mental wellbeing, and only
+            27% said their company offers any mental health support at all.
+          </p>
+
+          <p>
+            Sub-Saharan Africa reports the highest job-seeking rate globally at
+            72% (Gallup 2025), with 47% experiencing daily stress and 30%
+            experiencing loneliness - the worst figures of any region. In Kenya,
+            68% of professionals reported burnout symptoms. South Africa sees up
+            to 25% of employees experiencing depression annually, with
+            absenteeism costing the economy R12 to 16 billion per year.
+            Critically, a comprehensive scoping review found only 26 published
+            studies on workplace mental health interventions across the entire
+            African continent - meaning most organisations are operating without
+            any local evidence base to draw on.
+          </p>
+
+          <h2>What the research says actually moves the needle</h2>
+
+          <p>
+            The organisations that have shifted outcomes have done so by
+            redesigning work itself rather than supplementing it with benefits.
+            The evidence for this is substantially stronger than for any
+            individual-level intervention.
+          </p>
+
+          <p>
+            <strong>Manager development.</strong> Gallup's data shows that 70%
+            of team engagement variance is attributable to the manager - not
+            strategy, not compensation, not the office environment. Yet only 44%
+            of managers globally have ever received management training. When
+            they do receive it, active disengagement drops by half and
+            performance rises 20 to 28%. UKG's 2024 research found that managers
+            have as much impact on employees' mental health as their spouse -
+            69% each - and more than their doctor or therapist. One in three
+            managers currently feels out of their depth supporting mental
+            health. Training them is not a soft initiative. It is the
+            highest-leverage structural investment most organisations have not
+            yet made.
+          </p>
+
+          <p>
+            <strong>Psychological safety.</strong> Google's Project Aristotle
+            study of 180+ teams found psychological safety explained 43% of
+            variance in team performance - correlating with 19% higher
+            productivity, 31% more innovation, and 27% lower turnover.
+            Psychological safety is not a cultural value to be stated in a
+            handbook. It is a concrete product of how managers respond when
+            employees raise problems, make mistakes, or disagree. It is built or
+            destroyed in day-to-day interactions, and the manager is the primary
+            architect.
+          </p>
+
+          <p>
+            <strong>Workload design and genuine autonomy.</strong> The Whitehall
+            Studies found that employees with high demands and low control were
+            more than twice as likely to develop serious health conditions.
+            Giving workers real autonomy over how, when, and where they work
+            changes health outcomes at a measurable biological level - not
+            through stress management, but through removing the conditions that
+            produce chronic stress in the first place.
+          </p>
+
+          <p>
+            <strong>Structural time protection.</strong> An MIT Sloan study of
+            76 large companies found that introducing three meeting-free days
+            per week increased productivity by 73% and reduced stress by 57%.
+            Not a single company in the study reverted. The UK's four-day work
+            week trial across 61 companies found 71% reduced burnout, 57% less
+            staff turnover, and 39% less stress - with 92% of companies
+            continuing the policy after the trial ended. India's new Labour
+            Codes, implemented in November 2025, now explicitly permit a
+            four-day workweek option, signalling that regulatory support for
+            work design reform is arriving.
+          </p>
+
+          <h2>The business case in numbers leadership can use</h2>
+
+          <p>
+            The returns from structural wellbeing investment are documented at a
+            scale that justifies C-suite attention - not HR department
+            attention.
+          </p>
+
+          <p>
+            McKinsey and the World Economic Forum jointly quantified the prize
+            at $11.7 trillion in global economic value from investing in
+            holistic employee health, with 54 to 77% of that value coming from
+            improved productivity rather than reduced absenteeism. Gallup
+            estimates $9.6 trillion in GDP growth if engagement reached
+            best-practice levels. $438 billion was lost to disengagement in 2024
+            alone. The WHO calculates a $4 return for every $1 invested in
+            addressing depression and anxiety at work - conditions responsible
+            for 12 billion lost working days annually.
+          </p>
+
+          <p>
+            Deloitte's UK research on proactive, culture-change interventions
+            returns £5.60 for every £1 invested, compared to £3.40 for reactive
+            programmes. Burned- out employees are 3x more likely to leave within
+            a year, and 40% of all turnover costs are attributable to mental
+            health. Oxford researchers found that companies with higher
+            wellbeing scores generate $1.39 to $2.29 billion more in annual
+            profits per one-point increase in employee happiness. These are not
+            wellbeing metrics. They are financial metrics.
+          </p>
+
+          <blockquote>
+            You can't yoga your way out of these challenges. - McKinsey Health
+            Institute
+          </blockquote>
+
+          <h2>What this means for growing businesses</h2>
+
+          <p>
+            The implication for small and mid-sized organisations is clarifying,
+            not overwhelming. You do not need a $65 billion wellness budget to
+            build a workplace that does not harm people. You need to address
+            three things that the evidence consistently identifies as primary
+            drivers of both burnout and disengagement.
+          </p>
+
+          <p>
+            <strong>Your managers are your wellbeing programme.</strong> Before
+            buying any app, platform, or benefit, invest in training your
+            managers to have direct, honest conversations about workload, to
+            respond constructively when employees raise problems, and to protect
+            their teams from unnecessary overload. The evidence for this
+            intervention is stronger than for any other single action an
+            organisation can take.
+          </p>
+
+          <p>
+            <strong>Audit the work, not the workers.</strong> When burnout is
+            visible in a team, the instinct is to offer resilience training to
+            the individuals experiencing it. The more useful question is whether
+            the workload is sustainable, whether meetings are productive, and
+            whether employees have genuine control over how they prioritise
+            their time. These are job design questions, and answering them
+            honestly often costs nothing to implement.
+          </p>
+
+          <p>
+            <strong>Distinguish investment from signalling.</strong> A wellness
+            app subscription costs money and communicates intent. Conducting a
+            workload audit, training a manager, or protecting two afternoons per
+            week from meetings costs less and changes actual conditions. The
+            difference between a wellbeing perk and wellbeing infrastructure is
+            whether it addresses the cause or the symptom.
+          </p>
+
+          <p>
+            Deloitte's framework is the right one for any organisation to apply:
+            the determinants of wellbeing with outsized impact are leadership
+            behaviours, job and organisation design, and ways of working. These
+            are not HR department responsibilities. They require ownership at
+            the most senior level, because only senior leaders have the
+            authority to change how work is structured, how managers are held
+            accountable, and what the organisation actually rewards. The
+            companies that treat wellbeing as infrastructure - as a precondition
+            for performance rather than a supplement to it - are the ones
+            building organisations people choose to stay in.
+          </p>
+        </div>
+      </article>
+    </main>
+
+    <!-- Contact Section -->
+    <section
+      id="contact"
+      class="py-16 bg-gradient-to-br from-gray-900 to-gray-800 text-white"
+    >
+      <div class="container mx-auto px-6">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-10">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">
+              Are You Facing These Challenges?
+            </h2>
+            <p class="text-xl text-gray-300">
+              If these issues sound familiar, you're not alone. We can help.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <div class="space-y-3">
+              <div
+                class="challenge-item bg-gray-800 p-5 rounded-xl flex items-start"
+              >
+                <i class="fas fa-chart-line text-red-400 text-xl mr-4 mt-1"></i>
+                <div>
+                  <h4 class="font-bold text-lg mb-1">
+                    Low Employee Productivity
+                  </h4>
+                  <p class="text-gray-400 text-sm">
+                    Teams underperforming against targets
+                  </p>
+                </div>
+              </div>
+              <div
+                class="challenge-item bg-gray-800 p-5 rounded-xl flex items-start"
+              >
+                <i
+                  class="fas fa-user-slash text-orange-400 text-xl mr-4 mt-1"
+                ></i>
+                <div>
+                  <h4 class="font-bold text-lg mb-1">Disengaged Employees</h4>
+                  <p class="text-gray-400 text-sm">
+                    Workforce lacks motivation and connection
+                  </p>
+                </div>
+              </div>
+              <div
+                class="challenge-item bg-gray-800 p-5 rounded-xl flex items-start"
+              >
+                <i
+                  class="fas fa-door-open text-yellow-400 text-xl mr-4 mt-1"
+                ></i>
+                <div>
+                  <h4 class="font-bold text-lg mb-1">High Attrition Rates</h4>
+                  <p class="text-gray-400 text-sm">
+                    Constant turnover disrupting operations
+                  </p>
+                </div>
+              </div>
+              <div
+                class="challenge-item bg-gray-800 p-5 rounded-xl flex items-start"
+              >
+                <i
+                  class="fas fa-dollar-sign text-green-400 text-xl mr-4 mt-1"
+                ></i>
+                <div>
+                  <h4 class="font-bold text-lg mb-1">Escalating HR Costs</h4>
+                  <p class="text-gray-400 text-sm">
+                    HR overhead growing faster than business
+                  </p>
+                </div>
+              </div>
+              <div
+                class="challenge-item bg-gray-800 p-5 rounded-xl flex items-start"
+              >
+                <i
+                  class="fas fa-exclamation-circle text-red-500 text-xl mr-4 mt-1"
+                ></i>
+                <div>
+                  <h4 class="font-bold text-lg mb-1">Employee Grievances</h4>
+                  <p class="text-gray-400 text-sm">
+                    Unresolved conflicts affecting morale
+                  </p>
+                </div>
+              </div>
+              <div
+                class="challenge-item bg-gray-800 p-5 rounded-xl flex items-start"
+              >
+                <i class="fas fa-gavel text-purple-400 text-xl mr-4 mt-1"></i>
+                <div>
+                  <h4 class="font-bold text-lg mb-1">Compliance Concerns</h4>
+                  <p class="text-gray-400 text-sm">
+                    Struggling with changing labor laws
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="bg-white rounded-2xl shadow-2xl p-8">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">
+                  Get A Free Consultation
+                </h3>
+                <p class="text-gray-600 text-center mb-6">
+                  Fill out the form and we'll get back to you within 24 hours.
+                </p>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                  <input
+                    type="hidden"
+                    name="access_key"
+                    value="b592370f-3f74-4d15-89fd-66d2030e5cc4"
+                  />
+                  <input
+                    type="text"
+                    name="name"
+                    required
+                    placeholder="Your Name"
+                    class="w-full px-4 py-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:border-teal-500 text-gray-800"
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    placeholder="Your Email"
+                    class="w-full px-4 py-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:border-teal-500 text-gray-800"
+                  />
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Your Phone"
+                    class="w-full px-4 py-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:border-teal-500 text-gray-800"
+                  />
+                  <textarea
+                    name="message"
+                    required
+                    placeholder="Tell us about your HR challenges..."
+                    rows="4"
+                    class="w-full px-4 py-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:border-teal-500 text-gray-800"
+                  ></textarea>
+                  <button
+                    type="submit"
+                    class="w-full text-white py-4 rounded-lg font-semibold transition transform hover:scale-105"
+                    style="background-color: #32829b"
+                  >
+                    Get Free Consultation
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-8">
+          <div>
+            <h4 class="text-xl font-semibold mb-4">Our Services</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="https://tamarohr.com/payroll-outsourcing/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-400 hover:text-white transition"
+                  >Outsourced HR Operations</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://tamarohr.com/employee-survey-services/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-400 hover:text-white transition"
+                  >HR Consulting</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://tamarohr.com/fractional-chro/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-400 hover:text-white transition"
+                  >Fractional CHRO</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://tamarohr.com/executive-search/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-400 hover:text-white transition"
+                  >Executive Search</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://tamarohr.com/contract-temp-staffing/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-400 hover:text-white transition"
+                  >Contract Staffing</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="https://tamarohr.com/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-400 hover:text-white transition"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://tamarohr.com/about-us/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-400 hover:text-white transition"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://tamarohr.com/blog/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-400 hover:text-white transition"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://tamarohr.com/privacy-policy/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-400 hover:text-white transition"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Tamãrõ HR</h3>
+            <p class="text-gray-400 mb-4">
+              Professional HR outsourcing services to help your business grow.
+              25+ years of excellence in India, Africa and Gulf Countries.
+            </p>
+            <!-- <div class="flex items-center text-gray-400 mb-4">
+              <i class="fas fa-phone mr-3"></i
+              ><a href="tel:+919825273486" class="hover:text-white transition"
+                >+91 98251 73486</a
+              >
+            </div> -->
+            <div class="flex items-center text-gray-400 mb-6">
+              <i class="fas fa-map-marker-alt mr-3"></i
+              ><span>Ahmedabad, Gujarat, India</span>
+            </div>
+            <div class="flex space-x-4">
+              <a
+                href="https://www.facebook.com/tamarohr/"
+                target="_blank"
+                rel="noopener"
+                class="text-gray-400 hover:text-white transition text-2xl"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a
+                href="https://www.youtube.com/@tamarohr"
+                target="_blank"
+                rel="noopener"
+                class="text-gray-400 hover:text-white transition text-2xl"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/company/tamarohr/"
+                target="_blank"
+                rel="noopener"
+                class="text-gray-400 hover:text-white transition text-2xl"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400"
+        >
+          <p>&copy; 2020-2026 Tamãrõ HR. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a
+      href="https://wa.me/919825173486?text=Hi"
+      target="_blank"
+      rel="noopener"
+      aria-label="Chat on WhatsApp"
+      class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+    >
+      <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <script>
+      document
+        .getElementById("mobileMenuBtn")
+        .addEventListener("click", function () {
+          document.getElementById("mobileMenu").classList.toggle("hidden");
+        });
+
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth" });
+            document.getElementById("mobileMenu").classList.add("hidden");
+          }
+        });
+      });
+
+      function toggleExpand(id, btn) {
+        const el = document.getElementById(id);
+        const expanded = el.classList.toggle("expanded");
+        btn.classList.toggle("expanded", expanded);
+        btn.querySelector("span").textContent = expanded
+          ? "Read less"
+          : "Read more";
+      }
+
+      let currentTestimonial = 0;
+      const testimonials = document.querySelectorAll(".testimonial");
+      const dots = document.querySelectorAll(".testimonial-dot");
+
+      function showTestimonial(index) {
+        testimonials.forEach((t, i) =>
+          t.classList.toggle("active", i === index),
+        );
+        dots.forEach(
+          (d, i) =>
+            (d.style.backgroundColor = i === index ? "#32829b" : "#d1d5db"),
+        );
+      }
+
+      let interval = setInterval(() => {
+        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+        showTestimonial(currentTestimonial);
+      }, 5000);
+
+      dots.forEach((dot) => {
+        dot.addEventListener("click", () => {
+          clearInterval(interval);
+          currentTestimonial = parseInt(dot.dataset.index);
+          showTestimonial(currentTestimonial);
+          interval = setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(currentTestimonial);
+          }, 5000);
+        });
+      });
+
+      showTestimonial(0);
+    </script>
+  </body>
+</html>

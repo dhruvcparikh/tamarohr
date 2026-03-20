@@ -1,0 +1,13 @@
+{
+  "hosting": {
+    "public": "public",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "redirects": [
+      {
+        "source": "/hr-outsourcing",
+        "destination": "/payroll-outsourcing",
+        "type": 301
+      }
+    ]
+  }
+}
