@@ -7,6 +7,96 @@
         "source": "/hr-outsourcing",
         "destination": "/payroll-outsourcing",
         "type": 301
+      },
+      {
+        "source": "/blog/unlocking-potential-how-a-to-z-industries-transformed-leadership-and-operations",
+        "destination": "/blog/hr-transformation-services-case-study-manufacturing/",
+        "type": 301
+      },
+      {
+        "source": "/blog/unlocking-potential-how-a-to-z-industries-transformed-leadership-and-operations/",
+        "destination": "/blog/hr-transformation-services-case-study-manufacturing/",
+        "type": 301
+      },
+      {
+        "source": "/blog/returnship-programs",
+        "destination": "/blog/returnship-programs-india-hr-consulting-services/",
+        "type": 301
+      },
+      {
+        "source": "/blog/returnship-programs/",
+        "destination": "/blog/returnship-programs-india-hr-consulting-services/",
+        "type": 301
+      },
+      {
+        "source": "/blog/skills-based-hiring",
+        "destination": "/blog/skills-based-hiring-india-hr-process-transformation/",
+        "type": 301
+      },
+      {
+        "source": "/blog/skills-based-hiring/",
+        "destination": "/blog/skills-based-hiring-india-hr-process-transformation/",
+        "type": 301
+      },
+      {
+        "source": "/blog/workplace-safety-physical-psychological-digital",
+        "destination": "/blog/workplace-safety-hr-consultant-india-temporary-staffing/",
+        "type": 301
+      },
+      {
+        "source": "/blog/workplace-safety-physical-psychological-digital/",
+        "destination": "/blog/workplace-safety-hr-consultant-india-temporary-staffing/",
+        "type": 301
+      },
+      {
+        "source": "/blog/wellbeing-as-infrastructure",
+        "destination": "/blog/workplace-wellbeing-hr-consulting-services-india/",
+        "type": 301
+      },
+      {
+        "source": "/blog/wellbeing-as-infrastructure/",
+        "destination": "/blog/workplace-wellbeing-hr-consulting-services-india/",
+        "type": 301
+      },
+      {
+        "source": "/blog/engaging-quiet-contributors-ai-surveys",
+        "destination": "/blog/employee-engagement-survey-india-ai-quiet-contributors/",
+        "type": 301
+      },
+      {
+        "source": "/blog/engaging-quiet-contributors-ai-surveys/",
+        "destination": "/blog/employee-engagement-survey-india-ai-quiet-contributors/",
+        "type": 301
+      },
+      {
+        "source": "/blog/annual-survey-obsolete-monthly-pulse",
+        "destination": "/blog/employee-satisfaction-survey-monthly-pulse-strategy/",
+        "type": 301
+      },
+      {
+        "source": "/blog/annual-survey-obsolete-monthly-pulse/",
+        "destination": "/blog/employee-satisfaction-survey-monthly-pulse-strategy/",
+        "type": 301
+      },
+      {
+        "source": "/blog/diagnostic-surveys-outcome-based-engagement",
+        "destination": "/blog/employee-engagement-survey-india-diagnostic-surveys/",
+        "type": 301
+      },
+      {
+        "source": "/blog/diagnostic-surveys-outcome-based-engagement/",
+        "destination": "/blog/employee-engagement-survey-india-diagnostic-surveys/",
+        "type": 301
+      },
+      {
+        "source": "/blog/engaging-bharat-tier-2-city-distributed-teams",
+        "destination": "/blog/contract-staffing-tier-2-workforce-engagement-india/",
+        "type": 301
+      },
+      {
+        "source": "/blog/engaging-bharat-tier-2-city-distributed-teams/",
+        "destination": "/blog/contract-staffing-tier-2-workforce-engagement-india/",
+        "type": 301
       }
     ]
   }
