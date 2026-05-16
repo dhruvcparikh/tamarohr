@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -26,7 +26,7 @@
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://tamarohr.com/blog/why-are-your-employees-leaving/" />
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/styles.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -124,34 +124,6 @@
     />
 
     <style>
-      :root {
-        --primary: #32829b;
-        --primary-dark: #26667a;
-        --warm-accent: #e87d5c;
-      }
-
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      html {
-        scroll-behavior: smooth;
-      }
-      body {
-        font-family: "Outfit", sans-serif;
-        line-height: 1.6;
-        color: #2c3e50;
-      }
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: "Sora", sans-serif;
-        font-weight: 700;
-      }
 
       /* Blog Content Styles */
       .blog-content h2 {
@@ -256,7 +228,18 @@
         color: inherit;
       }
     </style>
-  </head>
+  
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tamarohr.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://tamarohr.com/blog/" },
+          { "@type": "ListItem", "position": 3, "name": "Why Are Your Employees Leaving?", "item": "https://tamarohr.com/blog/why-are-your-employees-leaving/" }
+        ]
+      }
+    </script></head>
   <body class="bg-gray-50">
     <!-- Navigation -->
     <nav class="bg-white shadow-md fixed w-full z-50">
@@ -412,7 +395,7 @@
           <img
             src="https://www.tamarohr.com/assets/HR Consultant Chetan Parikh.webp"
             alt="Chetan Parikh"
-            class="w-12 h-12 rounded-full mr-4 object-cover"
+            class="w-12 h-12 rounded-full mr-4 object-cover" loading="lazy" width="48" height="48"
           />
           <div>
             <p class="font-medium text-gray-800">Chetan Parikh</p>
@@ -427,7 +410,7 @@
       <img
         src="./employee-leaving.webp"
         alt="Payroll services for small business"
-        class="w-full h-auto rounded-2xl shadow-lg"
+        class="w-full h-auto rounded-2xl shadow-lg" fetchpriority="high" loading="eager"
       />
     </div>
 
@@ -931,65 +914,6 @@
       <i class="fab fa-whatsapp text-3xl"></i>
     </a>
 
-    <script>
-      document
-        .getElementById("mobileMenuBtn")
-        .addEventListener("click", function () {
-          document.getElementById("mobileMenu").classList.toggle("hidden");
-        });
-
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute("href"));
-          if (target) {
-            target.scrollIntoView({ behavior: "smooth" });
-            document.getElementById("mobileMenu").classList.add("hidden");
-          }
-        });
-      });
-
-      function toggleExpand(id, btn) {
-        const el = document.getElementById(id);
-        const expanded = el.classList.toggle("expanded");
-        btn.classList.toggle("expanded", expanded);
-        btn.querySelector("span").textContent = expanded
-          ? "Read less"
-          : "Read more";
-      }
-
-      let currentTestimonial = 0;
-      const testimonials = document.querySelectorAll(".testimonial");
-      const dots = document.querySelectorAll(".testimonial-dot");
-
-      function showTestimonial(index) {
-        testimonials.forEach((t, i) =>
-          t.classList.toggle("active", i === index)
-        );
-        dots.forEach(
-          (d, i) =>
-            (d.style.backgroundColor = i === index ? "#32829b" : "#d1d5db")
-        );
-      }
-
-      let interval = setInterval(() => {
-        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-        showTestimonial(currentTestimonial);
-      }, 5000);
-
-      dots.forEach((dot) => {
-        dot.addEventListener("click", () => {
-          clearInterval(interval);
-          currentTestimonial = parseInt(dot.dataset.index);
-          showTestimonial(currentTestimonial);
-          interval = setInterval(() => {
-            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-            showTestimonial(currentTestimonial);
-          }, 5000);
-        });
-      });
-
-      showTestimonial(0);
-    </script>
+    <script src="/assets/main.js" defer></script>
   </body>
 </html>

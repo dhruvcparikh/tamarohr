@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -41,6 +41,19 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://tamarohr.com/executive-search/" />
+    <meta
+      property="og:image"
+      content="https://tamarohr.com/assets/executive-search.webp"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Executive Search & Leadership Hiring India | Tamãrõ HR"
+    />
+    <meta
+      name="twitter:description"
+      content="Premier executive search firm specializing in mid-senior level recruitment. Expert leadership hiring and CXO placement across India."
+    />
     <!-- Favicon -->
     <link
       rel="icon"
@@ -60,7 +73,38 @@
       href="https://tamarohr.com/assets/apple-touch-icon.png"
     />
     <link rel="shortcut icon" href="https://tamarohr.com/assets/favicon.ico" />
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Executive Search & Leadership Hiring",
+        "description": "Premier executive search firm in India specialising in mid-senior level recruitment, CXO placement, and leadership hiring across Gujarat and India.",
+        "provider": {
+          "@type": "Organization",
+          "name": "Tamãrõ HR",
+          "url": "https://tamarohr.com"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "India"
+        },
+        "serviceType": "Executive Search & Recruitment",
+        "url": "https://tamarohr.com/executive-search/"
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tamarohr.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Executive Search & Leadership Hiring", "item": "https://tamarohr.com/executive-search/" }
+        ]
+      }
+    </script>
+    <link rel="stylesheet" href="/assets/styles.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -73,32 +117,6 @@
     />
 
     <style>
-      :root {
-        --primary: #32829b;
-        --primary-dark: #26667a;
-        --warm-accent: #e87d5c;
-      }
-
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      html {
-        scroll-behavior: smooth;
-      }
-      body {
-        font-family: "Outfit", sans-serif;
-        line-height: 1.6;
-        color: #2c3e50;
-      }
-      h1,
-      h2,
-      h3,
-      h4 {
-        font-family: "Sora", sans-serif;
-        font-weight: 700;
-      }
 
       .section-title {
         position: relative;
@@ -171,6 +189,8 @@
               src="https://tamarohr.com/assets/logo.png"
               alt="Tamaro HR Consultants Logo"
               style="height: 28px"
+              width="78"
+              height="28"
             />
           </a>
           <div class="hidden md:flex space-x-8">
@@ -1421,65 +1441,6 @@
       <i class="fab fa-whatsapp text-3xl"></i>
     </a>
 
-    <script>
-      document
-        .getElementById("mobileMenuBtn")
-        .addEventListener("click", function () {
-          document.getElementById("mobileMenu").classList.toggle("hidden");
-        });
-
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute("href"));
-          if (target) {
-            target.scrollIntoView({ behavior: "smooth" });
-            document.getElementById("mobileMenu").classList.add("hidden");
-          }
-        });
-      });
-
-      function toggleExpand(id, btn) {
-        const el = document.getElementById(id);
-        const expanded = el.classList.toggle("expanded");
-        btn.classList.toggle("expanded", expanded);
-        btn.querySelector("span").textContent = expanded
-          ? "Read less"
-          : "Read more";
-      }
-
-      let currentTestimonial = 0;
-      const testimonials = document.querySelectorAll(".testimonial");
-      const dots = document.querySelectorAll(".testimonial-dot");
-
-      function showTestimonial(index) {
-        testimonials.forEach((t, i) =>
-          t.classList.toggle("active", i === index),
-        );
-        dots.forEach(
-          (d, i) =>
-            (d.style.backgroundColor = i === index ? "#32829b" : "#d1d5db"),
-        );
-      }
-
-      let interval = setInterval(() => {
-        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-        showTestimonial(currentTestimonial);
-      }, 5000);
-
-      dots.forEach((dot) => {
-        dot.addEventListener("click", () => {
-          clearInterval(interval);
-          currentTestimonial = parseInt(dot.dataset.index);
-          showTestimonial(currentTestimonial);
-          interval = setInterval(() => {
-            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-            showTestimonial(currentTestimonial);
-          }, 5000);
-        });
-      });
-
-      showTestimonial(0);
-    </script>
+    <script src="/assets/main.js" defer></script>
   </body>
 </html>

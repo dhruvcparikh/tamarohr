@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -29,7 +29,76 @@
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://tamarohr.com/about-us/" />
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="About Tamãrõ HR | HR Consulting Gujarat" />
+    <meta
+      property="og:description"
+      content="Gujarat's trusted HR consulting partner since 1999. 25+ years of experience, 450+ clients served across India, Africa and GCC."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tamarohr.com/about-us/" />
+    <meta
+      property="og:image"
+      content="https://tamarohr.com/assets/Tamaro HR Team.webp"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="About Tamãrõ HR | HR Consulting Gujarat" />
+    <meta
+      name="twitter:description"
+      content="Gujarat's trusted HR consulting partner since 1999. 25+ years of experience, 450+ clients served across India, Africa and GCC."
+    />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "LocalBusiness",
+            "name": "Tamãrõ HR",
+            "description": "Gujarat's trusted HR consulting partner since 1999. 25+ years of experience, 450+ clients served, delivering excellence in HR solutions across India, Africa and GCC.",
+            "url": "https://tamarohr.com",
+            "telephone": "+91-79-2630-5049",
+            "foundingDate": "1999",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Ahmedabad",
+              "addressRegion": "Gujarat",
+              "addressCountry": "IN"
+            },
+            "areaServed": ["India", "Africa", "GCC"],
+            "sameAs": [
+              "https://www.facebook.com/tamarohr/",
+              "https://www.linkedin.com/company/tamarohr/",
+              "https://www.youtube.com/@tamarohr"
+            ]
+          },
+          {
+            "@type": "AboutPage",
+            "name": "About Tamãrõ HR",
+            "url": "https://tamarohr.com/about-us/",
+            "description": "Learn about Tamãrõ HR - Gujarat's trusted HR consulting partner since 1999. 25+ years of experience serving 450+ clients across India, Africa and GCC.",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Tamãrõ HR",
+              "url": "https://tamarohr.com"
+            }
+          }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tamarohr.com/" },
+          { "@type": "ListItem", "position": 2, "name": "About Us", "item": "https://tamarohr.com/about-us/" }
+        ]
+      }
+    </script>
+
+    <link rel="stylesheet" href="/assets/styles.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -56,20 +125,6 @@
         --primary-dark: #26667a;
         --warm-accent: #e87d5c;
         --light-bg: #e8f4f8;
-      }
-
-      body {
-        font-family: "Outfit", sans-serif;
-        line-height: 1.6;
-        color: #2c3e50;
-      }
-
-      h1,
-      h2,
-      h3,
-      h4 {
-        font-family: "Sora", sans-serif;
-        font-weight: 700;
       }
 
       .hero-gradient {
@@ -135,6 +190,8 @@
               src="https://tamarohr.com/assets/logo.png"
               alt="Tamaro HR Consultants Logo"
               style="height: 28px"
+              width="78"
+              height="28"
             />
           </a>
           <div class="hidden md:flex space-x-8">
@@ -270,7 +327,7 @@
             <img
               src="https://tamarohr.com/assets/Tamaro HR Team.webp"
               alt="Tamaro HR Team"
-              class="rounded-2xl shadow-xl w-full object-cover"
+              class="rounded-2xl shadow-xl w-full object-cover" loading="lazy"
             />
           </div>
           <div>
@@ -817,65 +874,6 @@
       <i class="fab fa-whatsapp text-3xl"></i>
     </a>
 
-    <script>
-      document
-        .getElementById("mobileMenuBtn")
-        .addEventListener("click", function () {
-          document.getElementById("mobileMenu").classList.toggle("hidden");
-        });
-
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute("href"));
-          if (target) {
-            target.scrollIntoView({ behavior: "smooth" });
-            document.getElementById("mobileMenu").classList.add("hidden");
-          }
-        });
-      });
-
-      function toggleExpand(id, btn) {
-        const el = document.getElementById(id);
-        const expanded = el.classList.toggle("expanded");
-        btn.classList.toggle("expanded", expanded);
-        btn.querySelector("span").textContent = expanded
-          ? "Read less"
-          : "Read more";
-      }
-
-      let currentTestimonial = 0;
-      const testimonials = document.querySelectorAll(".testimonial");
-      const dots = document.querySelectorAll(".testimonial-dot");
-
-      function showTestimonial(index) {
-        testimonials.forEach((t, i) =>
-          t.classList.toggle("active", i === index),
-        );
-        dots.forEach(
-          (d, i) =>
-            (d.style.backgroundColor = i === index ? "#32829b" : "#d1d5db"),
-        );
-      }
-
-      let interval = setInterval(() => {
-        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-        showTestimonial(currentTestimonial);
-      }, 5000);
-
-      dots.forEach((dot) => {
-        dot.addEventListener("click", () => {
-          clearInterval(interval);
-          currentTestimonial = parseInt(dot.dataset.index);
-          showTestimonial(currentTestimonial);
-          interval = setInterval(() => {
-            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-            showTestimonial(currentTestimonial);
-          }, 5000);
-        });
-      });
-
-      showTestimonial(0);
-    </script>
+    <script src="/assets/main.js" defer></script>
   </body>
 </html>
